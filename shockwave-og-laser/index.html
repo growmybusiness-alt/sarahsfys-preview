@@ -405,6 +405,20 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .edu-grid li{margin-bottom:5px}
 @media (max-width:900px){.feature{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.shots{grid-template-columns:1fr}}
+.bk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.bk{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--white)}
+.bk .kind{font:600 11px var(--h);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.bk h3{font-size:18px}
+.bk .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:2px}
+.bk .meta span{font-size:14px}
+.bk .meta b{font:700 18px var(--h);color:var(--ink);font-variant-numeric:tabular-nums}
+.bk .tilskud{font-size:13.5px;color:var(--green);font-weight:600}
+.bk p{font-size:14.5px}
+.bk .btn{margin-top:auto;align-self:flex-start;padding:12px 22px}
+.bk>p:last-of-type{margin-bottom:10px}
+.bk-ed{background:var(--footer);border-color:var(--footer);color:#C9D6D2;padding:26px}
+.bk-ed h3{color:#fff;font-size:21px}.bk-ed .kind,.bk-ed .tilskud{color:#9FD3C3}.bk-ed .meta{border-color:#2A3B37}.bk-ed .meta b{color:#fff}
+@media (max-width:640px){.bk-grid{grid-template-columns:1fr}}
 .media{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .media a{font-weight:600}
 .p-hero .wrap > div > *{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
@@ -458,7 +472,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
       <a href="../om-mig/">Om mig</a>
       <a href="../#priser">Priser</a>
       <a href="../#kontakt">Kontakt</a>
-      <a class="btn btn-solid" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid</a>
+      <a class="btn btn-solid" href="../book/">Book tid</a>
       <p class="menu-contact"><a href="tel:+4526820303">26 82 03 03</a> · <a href="mailto:sarahsfys@gmail.com">sarahsfys@gmail.com</a></p>
     </nav>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Åbn menu"><span></span><span></span><span></span></button>
@@ -471,7 +485,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
         <div class="crumbs"><a href="../">Forside</a> › <a href="../#behandlinger">Behandlinger</a> › Shockwave og laser</div>
         <h1 data-rediger="shockwave-og-laser-h1-1">Shockwave og laser</h1>
         <p class="lead" data-rediger="shockwave-og-laser-p-2">Har du ondt i en sene eller en muskel, der bare ikke vil gå over? Shockwave og laser sætter gang i helingen.</p>
-        <div class="cta"><a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a><a class="btn btn-white-line" href="tel:+4526820303">Ring 26 82 03 03</a></div>
+        <div class="cta"><a class="btn btn-white" href="../book/">Book tid</a><a class="btn btn-white-line" href="tel:+4526820303">Ring 26 82 03 03</a></div>
       </div>
       <img data-rediger-billede="shockwave-og-laser-billede-1" src="../images/fod.webp" alt="Shockwave og laser">
     </div>
@@ -490,7 +504,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
           <p data-rediger="shockwave-og-laser-p-44">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
           <span class="big" data-rediger="shockwave-og-laser-span-45">26 82 03 03</span>
           <span data-rediger="shockwave-og-laser-span-46">sarahsfys@gmail.com</span>
-          <a class="btn btn-solid" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
+          <a class="btn btn-solid" href="../book/">Book tid</a>
           <a class="btn btn-line" href="../#kontakt">Bliv ringet op</a>
         </div>
         <div class="side-box">
@@ -504,7 +518,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
   <div class="cta-band">
     <div class="wrap">
       <div><h2 data-rediger="shockwave-og-laser-h2-48">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="shockwave-og-laser-p-49">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
-      <a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
+      <a class="btn btn-white" href="../book/">Book tid</a>
     </div>
   </div>
 </main>
@@ -520,7 +534,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
 <div class="callbar">
   <a class="btn btn-solid" href="tel:+4526820303">Ring</a>
-  <a class="btn btn-line" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid</a>
+  <a class="btn btn-line" href="../book/">Book tid</a>
 </div>
 
 

@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book tid | Sarahs Træning &amp; Fysioterapi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Book tid hos fysioterapeut Sarah Olsen i Aalborg Ø. Vælg behandling og find en ledig tid i kalenderen. Ingen ventetid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap">
+<style>
+/* Klassisk klinik-layout: infobar, hvid header, foto-hero, fotokort, split-sektioner, mørk footer. Ét bevidst lyst tema. */
+:root{
+  color-scheme:light;
+  --white:#FFFFFF;
+  --bg-soft:#F2F5F4;
+  --ink:#1D2B28;
+  --text:#4A5754;
+  --line:#E1E7E5;
+  --green:#1E6656;
+  --green-dark:#154C40;
+  --footer:#14211E;
+  --star:#00B67A;
+  --h:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --b:"Open Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--white);color:var(--text);font-family:var(--b);font-size:16px;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
+h1,h2,h3{font-family:var(--h);color:var(--ink);margin:0;line-height:1.25;text-wrap:balance}
+h2{font-size:clamp(26px,3.2vw,36px);font-weight:600}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+a{color:var(--green)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:80px}
+.center{text-align:center}
+.intro{max-width:680px;margin:14px auto 0}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+
+.btn{display:inline-block;font:600 15px/1 var(--h);padding:15px 26px;border-radius:4px;text-decoration:none;border:2px solid var(--green);transition:background .15s,color .15s}
+.btn-solid{background:var(--green);color:var(--white)}
+.btn-solid:hover{background:var(--green-dark);border-color:var(--green-dark)}
+.btn-line{background:transparent;color:var(--green)}
+.btn-line:hover{background:var(--green);color:var(--white)}
+.btn-white{background:var(--white);border-color:var(--white);color:var(--green-dark)}
+.btn-white-line{border-color:var(--white);color:var(--white);background:transparent}
+.btn-white-line:hover{background:var(--white);color:var(--green-dark)}
+
+/* infobar */
+.infobar{background:var(--green-dark);color:#DCEAE6;font-size:13.5px}
+.infobar .wrap{display:flex;justify-content:flex-end;gap:26px;padding-block:8px;flex-wrap:wrap}
+.infobar a{color:inherit;text-decoration:none}
+@media (max-width:640px){.infobar .wrap{justify-content:center;gap:16px}.infobar .addr{display:none}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.logo b{font:700 clamp(15px,3.9vw,20px) var(--h);color:var(--green-dark);letter-spacing:-.01em}
+.logo span{font-size:12px;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
+.menu{display:flex;align-items:center;gap:30px}
+.menu a{font:500 15px var(--h);color:var(--ink);text-decoration:none}
+.menu a:hover{color:var(--green)}
+.menu .btn{color:var(--white);padding:12px 22px}
+.menu-contact{display:none}
+.burger{display:none}
+.dd{position:relative}
+.dd::after{content:"";position:absolute;left:-20px;right:-20px;top:100%;height:20px}
+.dd-btn{font:500 15px var(--h);color:var(--ink);background:none;border:0;padding:8px 0;cursor:pointer;display:flex;align-items:center;gap:6px}
+.dd-btn:hover{color:var(--green)}
+.dd-btn svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;transition:transform .2s}
+.dd:hover .dd-btn svg,.dd.open .dd-btn svg{transform:rotate(180deg)}
+.dd-panel{position:absolute;top:calc(100% + 16px);left:-28px;width:560px;background:var(--white);border-radius:10px;box-shadow:0 24px 60px rgba(20,33,30,.16);padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.dd:hover .dd-panel,.dd.open .dd-panel{opacity:1;visibility:visible;transform:none}
+.dd-panel a{display:block;padding:12px 14px;border-radius:8px;text-decoration:none}
+.dd-panel a:hover{background:var(--bg-soft)}
+.dd-panel b{display:block;font:600 15px var(--h);color:var(--ink)}
+.dd-panel span{display:block;font:400 13.5px/1.45 var(--b);color:var(--text);margin-top:2px}
+.dd-panel a.hl{background:#EAF3F0}
+.dd-panel em{font:600 10.5px var(--h);font-style:normal;letter-spacing:.06em;text-transform:uppercase;background:var(--green);color:#fff;border-radius:3px;padding:2px 6px;margin-left:6px;vertical-align:2px}
+@media (max-width:960px){
+  .burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:46px;height:46px;margin-right:-8px;border:0;background:none;cursor:pointer}
+  .burger span{display:block;height:2px;width:24px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .menu{position:fixed;left:0;right:0;bottom:0;top:var(--menu-top,78px);z-index:45;background:var(--white);flex-direction:column;align-items:stretch;gap:0;overflow-y:auto;
+    padding:6px max(20px,env(safe-area-inset-right,0px)) calc(110px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));
+    opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .25s,visibility .25s}
+  .menu.open{opacity:1;visibility:visible;transform:none}
+  .menu > a:not(.btn),.dd-btn{font:600 19px var(--h);padding:17px 0;border-bottom:1px solid var(--line);width:100%;justify-content:space-between}
+  .menu > a:not(.btn)::after{display:none}
+  .dd::after{display:none}
+  .dd-btn svg{width:16px;height:16px}
+  .dd:hover .dd-btn svg{transform:none}
+  .dd.open .dd-btn svg{transform:rotate(180deg)}
+  .dd-panel{position:static;width:auto;box-shadow:none;border-radius:0;padding:6px 0 10px;grid-template-columns:1fr;opacity:1;visibility:visible;transform:none;display:none;border-bottom:1px solid var(--line)}
+  .dd.open .dd-panel{display:grid}
+  .dd-panel a{padding:11px 12px}
+  .menu .btn{margin-top:24px;text-align:center;padding:17px;font-size:17px}
+  .menu-contact{display:block;text-align:center;margin-top:18px;font-size:15px;color:var(--text)}
+  .menu-contact a{color:var(--green);text-decoration:none;font-weight:600}
+  html.menu-open{overflow:hidden}
+  html.menu-open .callbar{display:none}
+}
+
+/* hero */
+.hero{position:relative;min-height:600px;display:flex;align-items:center;color:var(--white);overflow:hidden;isolation:isolate;padding-block:80px;background:#0E201C}
+.hero-bg{position:absolute;top:0;bottom:0;left:44%;right:0;width:56%;height:100%;object-fit:cover;object-position:30% center;z-index:-2;animation:kb 22s ease-out both;max-width:none}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0E201C 0%,#0E201C 44%,rgba(14,32,28,.5) 50%,rgba(14,32,28,0) 64%)}
+@media (max-width:860px){.hero-bg{left:0;width:100%;object-position:35% center}.hero::after{background:linear-gradient(180deg,rgba(14,32,28,.55),rgba(14,32,28,.85))}}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero .wrap > *{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap > :nth-child(2){animation-delay:.12s}
+.hero .wrap > :nth-child(3){animation-delay:.24s}
+.badge{animation:up .8s .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .wrap{width:100%}
+.hero h1{color:var(--white);font-size:clamp(36px,4.6vw,56px);font-weight:700;max-width:460px}
+.hero p{font-size:19px;max-width:420px;margin-top:18px;color:#E6EFEC}
+.hero p.tagline{font-size:14.5px;letter-spacing:.02em;color:#9FD3C3;margin-top:14px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.badge{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:28px;background:var(--white);color:var(--ink);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);text-decoration:none}
+.badge b{font:700 28px var(--h)}
+.badge small{display:block;font-size:12.5px;color:var(--text);line-height:1.4}
+.stars{display:inline-flex;gap:2px}
+.stars i{width:18px;height:18px;background:var(--star);color:#fff;font-style:normal;font-size:12px;display:grid;place-items:center}
+@media (max-width:700px){.hero{min-height:0;padding-block:64px 120px}.badge{left:max(20px,env(safe-area-inset-left,0px));right:auto}}
+
+/* editoren: alt staar fremme og stille, mens der rettes */
+.red-tilstand .reveal{opacity:1!important;transform:none!important}
+.red-tilstand .hero .wrap>*,.red-tilstand .badge,.red-tilstand .hero-bg{animation:none!important;opacity:1!important;transform:none!important}
+.red-tilstand .dd-panel{display:none}
+
+/* motion */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+header.top{transition:box-shadow .25s}
+header.top .nav{transition:height .25s}
+header.top.scrolled{box-shadow:0 6px 24px rgba(20,33,30,.08)}
+header.top.scrolled .nav{height:66px}
+.menu > a:not(.btn){position:relative}
+.menu > a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.menu > a:not(.btn):hover::after{transform:scaleX(1)}
+.btn{transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.btn-solid:hover,.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(20,33,30,.18)}
+.card{transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,33,30,.10)}
+.card .ph{overflow:hidden}
+.card img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.05)}
+.card .in a{transition:letter-spacing .2s}
+.card:hover .in a{letter-spacing:.01em}
+.edu{border:0}
+.edu summary{padding:6px 0;font-size:15.5px;color:var(--green)}
+.edu ul{margin-top:8px}
+.frame{position:relative;padding:0 22px 22px 0;isolation:isolate}
+.frame::before{content:"";position:absolute;right:0;bottom:0;width:70%;height:70%;border:3px solid var(--green);border-radius:6px;z-index:-1}
+.frame img{position:relative}
+.frame:has(img.portrait){width:fit-content;max-width:100%;margin-inline:auto}
+.split img.portrait{aspect-ratio:4/5;width:440px;max-width:100%}
+details p{animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-bg,.hero .wrap>*,.badge{animation:none}.js .reveal{opacity:1;transform:none}}
+
+/* usp */
+.usp{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.usp .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-block:28px}
+.usp div{display:flex;gap:14px;align-items:center}
+.usp svg{flex:none;width:40px;height:40px;stroke:var(--green);fill:none;stroke-width:1.6}
+.usp b{display:block;font:600 16px var(--h);color:var(--ink)}
+.usp span{font-size:14px}
+@media (max-width:800px){.usp .wrap{grid-template-columns:1fr}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.card .in{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .in a{margin-top:auto;font:600 14.5px var(--h);text-decoration:none}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+
+.more{margin-top:56px;background:var(--bg-soft);border-radius:6px;padding:36px 40px;display:grid;grid-template-columns:260px 1fr;gap:32px}
+.more ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px 28px}
+.more li{padding-left:26px;position:relative;color:var(--ink)}
+.more li a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.more li a:hover{color:var(--green);border-color:var(--green)}
+.more li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(-45deg)}
+@media (max-width:900px){.more{grid-template-columns:1fr;padding:28px}.more ul{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.more ul{grid-template-columns:1fr}}
+
+/* ED */
+.ed{background:var(--footer);color:#C9D6D2}
+.ed .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.ed img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;display:block}
+.ed .tag{display:inline-block;font:600 12px var(--h);letter-spacing:.08em;text-transform:uppercase;color:#9FD3C3;margin-bottom:14px}
+.ed h2{color:#fff}
+.ed p{margin-top:14px;max-width:560px}
+.ed-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin:28px 0 30px;padding:0;list-style:none}
+.ed-facts b{display:block;font:700 clamp(22px,6vw,28px) var(--h);color:#fff;font-variant-numeric:tabular-nums}
+.ed-facts span{font-size:14.5px}
+.ed .cta{display:flex;gap:12px;flex-wrap:wrap}
+.ed .press{margin-top:26px;padding-top:18px;border-top:1px solid #2A3B37;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px}
+.ed .press span{font:600 11.5px var(--h);letter-spacing:.08em;text-transform:uppercase;color:#8FA59F}
+.ed .press a{font:700 17px var(--h);color:#fff;text-decoration:none;opacity:.85;transition:opacity .2s}
+.ed .press a:hover{opacity:1;text-decoration:underline}
+@media (max-width:900px){.ed .wrap{grid-template-columns:1fr;gap:32px}}
+@media (max-width:340px){.ed-facts{grid-template-columns:1fr}}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split img{width:100%;border-radius:6px;display:block;aspect-ratio:4/3;object-fit:cover}
+.split .txt{display:flex;flex-direction:column;gap:16px;min-width:0}
+.split ul{margin:0;padding-left:20px}
+.split li{margin-bottom:4px}
+.note{font-size:13px;color:var(--text);opacity:.8}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:32px}}
+
+/* reviews */
+.reviews{background:var(--bg-soft)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.rev{background:var(--white);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.rev p{color:var(--ink);font-size:16.5px}
+.rev footer{margin-top:auto;font:600 14px var(--h);color:var(--ink)}
+.rev footer span{display:block;font:400 13px var(--b);color:var(--text)}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.marquee{margin-top:44px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:24px;width:max-content;animation:mq 60s linear infinite;padding-block:6px 14px}
+.marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
+.track .rev{width:340px;flex:none;margin:0}
+@keyframes mq{to{transform:translateX(calc(-50% - 12px))}}
+@media (prefers-reduced-motion:reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.track{animation:none}.track .rev[aria-hidden]{display:none}}
+
+/* insurance */
+.ins{background:var(--green);color:#E6F0ED}
+.ins .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;padding-block:52px;flex-wrap:wrap}
+.ins h2{color:var(--white)}
+.ins p{max-width:620px;margin-top:8px}
+
+/* prices */
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:44px}
+.ptable{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 28px}
+.ptable h3{margin-bottom:10px}
+.ptable table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ptable td{padding:10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable tr:last-child td{border-bottom:0}
+.ptable td:last-child{text-align:right;font-weight:600;color:var(--ink);white-space:nowrap;padding-left:16px}
+.ptable small{display:block;font-size:13px;color:var(--green)}
+.pnote{margin-top:24px;font-size:14px;text-align:center}
+@media (max-width:860px){.price-grid{grid-template-columns:1fr}}
+/* classes */
+.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:44px}
+.cls{border-top:3px solid var(--green);padding-top:18px;display:flex;flex-direction:column;gap:8px}
+.cls .where{font-size:13.5px;color:var(--green);font-weight:600}
+@media (max-width:900px){.classes{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.classes{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:820px;margin:40px auto 0}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 0;font:600 17px var(--h);color:var(--ink);display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--green);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:20px;margin-top:-6px}
+
+/* contact */
+.contact{background:var(--bg-soft)}
+.c-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:44px}
+.c-box{background:var(--white);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:8px}
+.c-box .big{font:600 20px var(--h);color:var(--ink);user-select:all;overflow-wrap:anywhere}
+.c-box button{align-self:flex-start;margin-top:6px;font:600 13px var(--h);background:none;border:1px solid var(--line);border-radius:4px;padding:7px 12px;color:var(--green);cursor:pointer}
+@media (max-width:860px){.c-grid{grid-template-columns:1fr}}
+.c-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;margin-top:44px;align-items:start}
+.c-side{display:grid;gap:20px}
+.c-side .c-box{padding:22px 24px}
+.lead-form{background:var(--white);border-radius:6px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.lead-form h3{grid-column:1/-1;font-size:22px}
+.lead-form .sub{grid-column:1/-1;margin-top:-10px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label,.field legend{font:600 14px var(--h);color:var(--ink);padding:0}
+.field input,.field select,.field textarea{font:400 16px var(--b);color:var(--ink);background:var(--white);border:1px solid #C9D3D0;border-radius:4px;padding:12px 14px;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--green);outline-offset:0;border-color:var(--green)}
+.field textarea{min-height:110px;resize:vertical}
+fieldset.field{border:0;margin:0;padding:0}
+.times{display:flex;flex-wrap:wrap;gap:8px}
+.times label{font:500 14px var(--b);color:var(--ink);border:1px solid #C9D3D0;border-radius:4px;padding:9px 14px;cursor:pointer}
+.times label{position:relative}
+.times input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.times input:checked+span{color:var(--white)}
+.times label:has(input:checked){background:var(--green);border-color:var(--green);color:var(--white)}
+.times label:has(input:focus-visible){outline:3px solid var(--green);outline-offset:2px}
+.consent{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.consent input{margin-top:4px;accent-color:var(--green);width:18px;height:18px;flex:none}
+.lead-form .btn{grid-column:1/-1;justify-self:start;border:0;cursor:pointer}
+.err{color:#B3261E;font-size:13px}
+.form-msg{grid-column:1/-1;background:var(--bg-soft);border-left:4px solid var(--green);padding:16px 18px;border-radius:4px;color:var(--ink)}
+@media (max-width:900px){.c-layout{grid-template-columns:1fr}}
+@media (max-width:560px){.lead-form{grid-template-columns:1fr;padding:24px}}
+
+footer.site{background:var(--footer);color:#A9B8B4;font-size:14px}
+footer.site > .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px;padding-block:56px}
+footer.site h3{color:var(--white);font-size:15px;margin-bottom:12px}
+footer.site a{color:#A9B8B4;text-decoration:none}
+footer.site a:hover{color:var(--white)}
+footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.copy-line{border-top:1px solid #24342F;padding-block:18px;font-size:12.5px;color:#7F918C}
+.copy-line .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:0}
+@media (max-width:860px){footer.site > .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){footer.site > .wrap{grid-template-columns:1fr}}
+
+.callbar{display:none}
+@media (max-width:640px){
+  .callbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--white);box-shadow:0 -2px 12px rgba(0,0,0,.08);
+    padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .callbar .btn{flex:1;text-align:center}
+  .copy-line{padding-bottom:90px}
+  section{padding-block:60px}
+}
+
+/* undersider */
+.crumbs{font-size:13.5px;color:#CFE0DB;margin-bottom:14px}
+.crumbs a{color:#fff;text-decoration:none}
+.p-hero{background:var(--green-dark);color:#E6F0ED;padding-block:64px}
+.p-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.p-hero.noimg .wrap{grid-template-columns:1fr}
+.p-hero h1{color:#fff;font-size:clamp(32px,4.4vw,48px);font-weight:700}
+.p-hero p.lead{font-size:18.5px;margin-top:16px;max-width:600px}
+.p-hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.p-hero img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+@media (max-width:860px){.p-hero .wrap{grid-template-columns:1fr}.p-hero{padding-block:44px}}
+.p-body{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:start}
+.p-main{min-width:0;display:flex;flex-direction:column;gap:44px}
+.p-main section{padding:0}
+.p-main h2{font-size:clamp(24px,2.6vw,30px);margin-bottom:14px}
+.p-main p+p{margin-top:12px}
+.p-main ul.check{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.p-main ul.check li{padding-left:26px;position:relative;color:var(--ink)}
+.p-main ul.check li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(-45deg)}
+@media (max-width:560px){.p-main ul.check{grid-template-columns:1fr}}
+.steps{list-style:none;counter-reset:st;padding:0;margin:6px 0 0;display:grid;gap:18px}
+.steps li{counter-increment:st;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.steps li::before{content:counter(st);width:44px;height:44px;border-radius:50%;background:var(--bg-soft);color:var(--green);font:700 18px var(--h);display:grid;place-items:center}
+.steps b{display:block;font:600 17px var(--h);color:var(--ink)}
+.p-main .ptable{padding:22px 24px}
+.p-side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 100px);display:grid;gap:20px}
+.side-box{background:var(--bg-soft);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.side-box .big{font:600 22px var(--h);color:var(--ink)}
+.side-box .btn{text-align:center}
+.side-box ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.side-box ul a{display:block;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.side-box ul a:hover,.side-box ul a[aria-current]{color:var(--green)}
+@media (max-width:960px){.p-body{grid-template-columns:1fr}.p-side{position:static}}
+.callout{background:var(--bg-soft);border-left:4px solid var(--green);padding:18px 20px;border-radius:4px;color:var(--ink)}
+.cta-band{background:var(--green);color:#E6F0ED}
+.cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-block:48px}
+.cta-band h2{color:#fff}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 6px}
+.pics figure{margin:0}
+.pics img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;display:block}
+.pics figcaption{font-size:13.5px;color:var(--text);margin-top:6px}
+.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.press{display:flex;flex-direction:column;gap:4px;padding:18px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--text);transition:border-color .2s,transform .2s,box-shadow .2s}
+.press:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,33,30,.08)}
+.press b{font:700 19px var(--h);color:var(--ink);letter-spacing:-.01em}
+.press .kind{font:600 11px var(--h);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.press .t{font-size:14px;line-height:1.45}
+.press .go{margin-top:auto;padding-top:8px;font:600 13.5px var(--h);color:var(--green)}
+.press.feat{grid-column:1/-1;background:var(--footer);border-color:var(--footer);color:#C9D6D2;padding:24px}
+.press.feat b{color:#fff;font-size:26px}.press.feat .kind,.press.feat .go{color:#9FD3C3}.press.feat .t{font-size:16px}
+@media (max-width:700px){.press-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.press-grid{grid-template-columns:1fr}}
+.citat{margin:0;padding:26px 28px;background:var(--bg-soft);border-radius:8px;font:600 clamp(19px,2.2vw,23px)/1.45 var(--h);color:var(--ink)}
+.citat cite{display:block;margin-top:12px;font:400 14px var(--b);font-style:normal;color:var(--text)}
+.feature{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;background:var(--footer);color:#C9D6D2;border-radius:10px;padding:26px;margin-top:6px}
+.feature img{width:100%;border-radius:6px;display:block;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(-1.2deg);transition:transform .3s}
+.feature a.shot:hover img{transform:rotate(0) scale(1.02)}
+.feature .kind{font:600 11.5px var(--h);letter-spacing:.08em;text-transform:uppercase;color:#9FD3C3}
+.feature h3{color:#fff;font-size:22px;margin:8px 0 10px}
+.feature p{font-size:15.5px}
+.feature .btn{margin-top:16px}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+.shot-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .2s,box-shadow .2s}
+.shot-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,33,30,.10)}
+.shot-card .ark{background:#EEF1F0;padding:14px 14px 0;overflow:hidden;height:150px}
+.shot-card .ark img{width:100%;display:block;border-radius:4px 4px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.shot-card .ark.tekst{display:flex;align-items:center;padding:14px 18px}
+.shot-card .ark.tekst span{font:800 22px/1.15 Georgia,serif;color:#111}
+.shot-card .info{padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.shot-card b{font:700 16px var(--h);color:var(--ink)}
+.shot-card small{font-size:13px}
+.edu-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:10px}
+.edu-grid ul{columns:2;column-gap:28px}
+@media (max-width:560px){.edu-grid ul{columns:1}}
+.edu-grid div{background:var(--bg-soft);border-radius:8px;padding:18px 20px}
+.edu-grid h3{font-size:16px;margin-bottom:8px}
+.edu-grid ul{margin:0;padding-left:18px;font-size:14.5px}
+.edu-grid li{margin-bottom:5px}
+@media (max-width:900px){.feature{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.shots{grid-template-columns:1fr}}
+.bk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.bk{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--white)}
+.bk .kind{font:600 11px var(--h);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.bk h3{font-size:18px}
+.bk .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:2px}
+.bk .meta span{font-size:14px}
+.bk .meta b{font:700 18px var(--h);color:var(--ink);font-variant-numeric:tabular-nums}
+.bk .tilskud{font-size:13.5px;color:var(--green);font-weight:600}
+.bk p{font-size:14.5px}
+.bk .btn{margin-top:auto;align-self:flex-start;padding:12px 22px}
+.bk>p:last-of-type{margin-bottom:10px}
+.bk-ed{background:var(--footer);border-color:var(--footer);color:#C9D6D2;padding:26px}
+.bk-ed h3{color:#fff;font-size:21px}.bk-ed .kind,.bk-ed .tilskud{color:#9FD3C3}.bk-ed .meta{border-color:#2A3B37}.bk-ed .meta b{color:#fff}
+@media (max-width:640px){.bk-grid{grid-template-columns:1fr}}
+.media{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.media a{font-weight:600}
+.p-hero .wrap > div > *{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.p-hero .wrap > div > :nth-child(2){animation-delay:.08s}
+.p-hero .wrap > div > :nth-child(3){animation-delay:.16s}
+.p-hero .wrap > div > :nth-child(4){animation-delay:.24s}
+.p-hero img{animation:up 1s .2s cubic-bezier(.2,.7,.2,1) both}
+.side-box ul a{transition:color .2s,padding-left .2s}
+.side-box ul a:hover{padding-left:6px}
+@media (prefers-reduced-motion:reduce){.p-hero .wrap > div > *,.p-hero img{animation:none}}
+.red-tilstand .p-hero .wrap > div > *,.red-tilstand .p-hero img{animation:none!important;opacity:1!important;transform:none!important}
+
+body{margin:0} img{max-width:100%} [hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+<link rel="canonical" href="https://www.sarahsfys.dk/book/">
+<meta property="og:title" content="Book tid | Sarahs Træning &amp; Fysioterapi">
+<meta property="og:description" content="Book tid hos fysioterapeut Sarah Olsen i Aalborg Ø. Vælg behandling og find en ledig tid i kalenderen. Ingen ventetid.">
+<meta property="og:image" content="https://www.sarahsfys.dk/images/hero.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sarahsfys.dk/book/">
+<meta property="og:locale" content="da_DK">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Physiotherapy", "name": "Sarahs Træning & Fysioterapi", "url": "https://www.sarahsfys.dk/", "telephone": "+4526820303", "email": "sarahsfys@gmail.com", "image": "https://www.sarahsfys.dk/images/portraet.webp", "address": {"@type": "PostalAddress", "streetAddress": "Sahlvej 1", "postalCode": "9220", "addressLocality": "Aalborg Øst", "addressCountry": "DK"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "70"}, "sameAs": ["https://www.facebook.com/sarahsfys/", "https://www.instagram.com/sarahsfys/", "https://dk.trustpilot.com/review/sarahsfys.dk"]}</script>
+</head>
+<body>
+<div class="infobar">
+  <div class="wrap">
+    <a href="tel:+4526820303">☎ 26 82 03 03</a>
+    <a href="mailto:sarahsfys@gmail.com">✉ sarahsfys@gmail.com</a>
+    <span class="addr">Sahlvej 1, 9220 Aalborg Ø</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="logo" href="../#top"><b>Sarahs Træning &amp; Fysioterapi</b><span>Fysioterapeut i Aalborg Ø</span></a>
+    <nav class="menu" id="menu" aria-label="Hovedmenu">
+      <div class="dd">
+        <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-beh">Behandlinger<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="dd-panel" id="dd-beh">
+          <a href="../fysioterapi/"><b>Fysioterapi</b><span>Ryg, nakke, skulder, knæ og meget mere</span></a>
+          <a href="../rejsningsproblemer/" class="hl"><b>Rejsningsproblemer <em>Speciale</em></b><span>Diskret behandling med shockwave</span></a>
+          <a href="../shockwave-og-laser/"><b>Shockwave og laser</b><span>Hælspore, sener og muskelskader</span></a>
+          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og cupping</span></a>
+          <a href="../oresten-og-svimmelhed/"><b>Svimmelhed og øresten</b><span>Undersøgelse, behandling og øvelser</span></a>
+          <a href="../hjemmebehandling-og-firmaaftaler/"><b>Hjemmebehandling og firma</b><span>Jeg kommer ud til dig</span></a>
+        </div>
+      </div>
+      <a href="../hold-og-traening/">Hold og træning</a>
+      <a href="../om-mig/">Om mig</a>
+      <a href="../#priser">Priser</a>
+      <a href="../#kontakt">Kontakt</a>
+      <a class="btn btn-solid" href="../book/">Book tid</a>
+      <p class="menu-contact"><a href="tel:+4526820303">26 82 03 03</a> · <a href="mailto:sarahsfys@gmail.com">sarahsfys@gmail.com</a></p>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Åbn menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main>
+  <div class="p-hero noimg">
+    <div class="wrap">
+      <div>
+        <div class="crumbs"><a href="../">Forside</a> › Book tid</div>
+        <h1 data-rediger="book-h1-1">Book tid</h1>
+        <p class="lead" data-rediger="book-p-2">Vælg den behandling, der passer til dig, så kommer du direkte til min kalender. Der er ingen ventetid.</p>
+        <div class="cta"><a class="btn btn-white-line" href="tel:+4526820303">Ring 26 82 03 03</a></div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-block:72px">
+    <div class="p-body">
+      <div class="p-main">
+        <section><h2 data-rediger="book-h2-3">Rejsningsproblemer</h2><article class='bk bk-ed'><span class='kind' data-rediger="book-span-4">Diskret · Første gang</span><h3 data-rediger="book-h3-5">1. konsultation, rejsningsproblemer</h3><p class='meta'><span data-rediger="book-span-6">60 min</span><b data-rediger="book-b-7">950 kr.</b></p><p class='tilskud' data-rediger="book-p-8">Tilskud 140 kr.</p><p data-rediger="book-p-9">Vi starter med en god snak for at finde ud af, om behandlingen er relevant for netop dig. Er du i tvivl, så skriv eller ring først.</p><a class='btn btn-white' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752007&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article></section><section><h2 data-rediger="book-h2-10">Fysioterapi, massage og andre behandlinger</h2><div class='bk-grid'><article class='bk'><span class='kind' data-rediger="book-span-11">Ny hos mig</span><h3 data-rediger="book-h3-12">1. konsultation</h3><p class='meta'><span data-rediger="book-span-13">45 min</span><b data-rediger="book-b-14">500 kr.</b></p><p class=tilskud data-rediger="book-p-15">Tilskud 140 kr.</p><p data-rediger="book-p-16">Første gang, hvis du har ét problem, du gerne vil have hjælp til.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752001&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-17">Ny hos mig</span><h3 data-rediger="book-h3-18">1. konsultation</h3><p class='meta'><span data-rediger="book-span-19">60 min</span><b data-rediger="book-b-20">650 kr.</b></p><p class=tilskud data-rediger="book-p-21">Tilskud 140 kr.</p><p data-rediger="book-p-22">Første gang, hvis du døjer med flere ting. Kan ikke bookes med sundhedsforsikring.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752023&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-23">Har været hos mig før</span><h3 data-rediger="book-h3-24">Behandling</h3><p class='meta'><span data-rediger="book-span-25">30 min</span><b data-rediger="book-b-26">335 kr.</b></p><p class=tilskud data-rediger="book-p-27">Tilskud 90 kr.</p><p data-rediger="book-p-28">Til dig, der allerede er i gang med et forløb.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752002&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-29">Sundhedsforsikring</span><h3 data-rediger="book-h3-30">Behandling med forsikring</h3><p class='meta'><span data-rediger="book-span-31">30 min</span><b data-rediger="book-b-32">Via din forsikring</b></p><p data-rediger="book-p-33">Fx Pension Danmark eller Nordic Netcare. Husk betalingsgarantien fra dit forsikringsselskab.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752015&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-34">Massage</span><h3 data-rediger="book-h3-35">Fysio-massage</h3><p class='meta'><span data-rediger="book-span-36">30 min</span><b data-rediger="book-b-37">365 kr.</b></p><p class=tilskud data-rediger="book-p-38">Tilskud 90 kr.</p><p data-rediger="book-p-39">Massage af ét område, fx nakke og skuldre.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752004&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-40">Massage</span><h3 data-rediger="book-h3-41">Fysio-massage</h3><p class='meta'><span data-rediger="book-span-42">60 min</span><b data-rediger="book-b-43">680 kr.</b></p><p class=tilskud data-rediger="book-p-44">Tilskud 90 kr.</p><p data-rediger="book-p-45">Massage af flere områder eller hele kroppen.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752005&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-46">Kun én behandlingsform</span><h3 data-rediger="book-h3-47">Shockwave, laser eller cupping</h3><p class='meta'><span data-rediger="book-span-48">30 min</span><b data-rediger="book-b-49">Fra 310 kr.</b></p><p class=tilskud data-rediger="book-p-50">Tilskud 90 kr.</p><p data-rediger="book-p-51">Hvis du kun skal have shockwave, laser eller cupping. Skriv gerne i bookingen, hvilken det er.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752006&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article></div></section><section><h2 data-rediger="book-h2-52">Sådan foregår bookingen</h2><ol class='steps'><li><div><b data-rediger="book-b-53">Vælg behandling</b>Klik på "Vælg tid" ved den behandling, du skal have.</div></li><li><div><b data-rediger="book-b-54">Vælg en ledig tid</b>Du kommer til min kalender, hvor du kan se de ledige tider de næste 8 uger.</div></li><li><div><b data-rediger="book-b-55">Udfyld dine oplysninger</b>Du skal bruge CPR-nummer, mobilnummer, navn og e-mail. Du kan vælge at få en bekræftelse på sms eller e-mail.</div></li></ol><p style='margin-top:14px' data-rediger="book-p-56">Kan du ikke finde en tid, der passer, eller har du brug for en akut tid, så ring på 26 82 03 03. Afbud skal ske senest 48 timer før.</p></section>
+        
+        
+      </div>
+      <aside class="p-side">
+        <div class="side-box">
+          <h3 data-rediger="book-h3-57">Book tid</h3>
+          <p data-rediger="book-p-58">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
+          <span class="big" data-rediger="book-span-59">26 82 03 03</span>
+          <span data-rediger="book-span-60">sarahsfys@gmail.com</span>
+          <a class="btn btn-solid" href="../book/">Book tid</a>
+          <a class="btn btn-line" href="../#kontakt">Bliv ringet op</a>
+        </div>
+        <div class="side-box">
+          <h3 data-rediger="book-h3-61">Behandlinger</h3>
+          <ul><li><a href="../fysioterapi/">Fysioterapi</a></li><li><a href="../massage/">Massage og cupping</a></li><li><a href="../shockwave-og-laser/">Shockwave og laser</a></li><li><a href="../rejsningsproblemer/">Rejsningsproblemer</a></li><li><a href="../oresten-og-svimmelhed/">Svimmelhed og øresten</a></li><li><a href="../hold-og-traening/">Hold og træning</a></li><li><a href="../hjemmebehandling-og-firmaaftaler/">Hjemmebehandling og firma</a></li></ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="wrap">
+      <div><h2 data-rediger="book-h2-62">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="book-p-63">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
+      <a class="btn btn-white" href="../book/">Book tid</a>
+    </div>
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div><h3>Sarahs Træning &amp; Fysioterapi</h3><p>Fysioterapi, massage og træning i Aalborg Ø.</p></div>
+    <div><h3>Kontakt</h3><ul><li>26 82 03 03</li><li>sarahsfys@gmail.com</li><li>Sahlvej 1, 9220 Aalborg Ø</li></ul></div>
+    <div><h3>Behandlinger</h3><ul><li><a href="../fysioterapi/">Fysioterapi</a></li><li><a href="../massage/">Massage</a></li><li><a href="../shockwave-og-laser/">Shockwave og laser</a></li><li><a href="../rejsningsproblemer/">Rejsningsproblemer</a></li><li><a href="../oresten-og-svimmelhed/">Svimmelhed</a></li><li><a href="../hold-og-traening/">Hold og træning</a></li></ul></div>
+    <div><h3>Følg mig</h3><ul><li><a href="https://www.instagram.com/sarahsfys/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/sarahsfys/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://dk.trustpilot.com/review/sarahsfys.dk" target="_blank" rel="noopener">Trustpilot</a></li></ul></div>
+  </div>
+  <div class="copy-line"><div class="wrap"><span>© 2026 Sarahs Træning &amp; Fysioterapi</span><span>Sahlvej 1, 9220 Aalborg Ø · Tlf. 26 82 03 03</span></div></div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-solid" href="tel:+4526820303">Ring</a>
+  <a class="btn btn-line" href="../book/">Book tid</a>
+</div>
+
+
+<script>
+/* menu: dropdown + burger */
+(()=>{const hdr=document.querySelector('header.top'),menu=document.getElementById('menu'),burger=document.querySelector('.burger');
+if(!menu||!burger)return;
+const setOpen=o=>{if(o)document.documentElement.style.setProperty('--menu-top',hdr.getBoundingClientRect().bottom+'px');
+menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Luk menu':'Åbn menu');document.documentElement.classList.toggle('menu-open',o)};
+burger.addEventListener('click',()=>setOpen(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{setOpen(false);document.querySelectorAll('.dd.open').forEach(d=>{d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')})}));
+document.querySelectorAll('.dd').forEach(dd=>{const b=dd.querySelector('.dd-btn');b.addEventListener('click',e=>{e.stopPropagation();const o=!dd.classList.contains('open');dd.classList.toggle('open',o);b.setAttribute('aria-expanded',o)})});
+document.addEventListener('click',e=>{if(!e.target.closest('.dd'))document.querySelectorAll('.dd.open').forEach(d=>{d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')})});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){setOpen(false);document.querySelectorAll('.dd.open').forEach(d=>{d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')})}});
+addEventListener('resize',()=>{if(innerWidth>960&&menu.classList.contains('open'))setOpen(false)});
+})();
+/* bevægelse: header ved scroll + indhold der toner frem. Elementer der allerede er synlige ved indlæsning skjules aldrig. */
+(()=>{const hdr=document.querySelector('header.top');
+const onS=()=>hdr&&hdr.classList.toggle('scrolled',scrollY>20);addEventListener('scroll',onS,{passive:true});onS();
+if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
+const sel='.usp .wrap>div,.center,.card,.more,.split>*,.ptable,.cls,.marquee,details,.c-layout>*,.p-main>section,.side-box,.cta-band .wrap>*,.step,.ed .wrap>*';
+const els=[...document.querySelectorAll(sel)].filter(e=>!e.closest('.hero,.p-hero')&&e.getBoundingClientRect().top>innerHeight);
+document.documentElement.classList.add('js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+els.forEach(e=>{const sib=[...e.parentElement.children].filter(x=>x.matches(sel));const i=sib.indexOf(e);if(i>0)e.style.setProperty('--d',Math.min(i,4)*0.08+'s');e.classList.add('reveal');io.observe(e)});
+document.querySelectorAll(sel).forEach(e=>{if(!e.classList.contains('reveal'))e.classList.add('in')});
+})();
+const form=document.getElementById('lead');
+if(form)form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const err=document.getElementById('f-err'),done=document.getElementById('f-done');
+  const name=form.navn.value.trim(),tel=form.telefon.value.trim();
+  const miss=[];if(!name)miss.push('navn');if(tel.replace(/\D/g,'').length<8)miss.push('et telefonnummer på 8 cifre');if(!form.samtykke.checked)miss.push('accept af kontakt');
+  if(miss.length){err.textContent='Udfyld venligst '+miss.join(', ')+'.';err.hidden=false;return}
+  err.hidden=true;
+  const ep=form.dataset.endpoint;
+  if(!ep){done.textContent='Forhåndsvisning: formularen er ikke koblet til endnu. På den færdige side sendes forespørgslen direkte til Sarahs mail.';done.hidden=false;return}
+  try{const r=await fetch(ep,{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});
+    if(!r.ok)throw 0;
+    form.querySelectorAll('.field,.consent,button,.sub').forEach(x=>x.hidden=true);
+    done.textContent='Tak, '+name.split(' ')[0]+'. Jeg ringer dig op hurtigst muligt.';done.hidden=false;
+  }catch(_){err.textContent='Forespørgslen kunne ikke sendes. Ring i stedet på 26 82 03 03.';err.hidden=false}
+});
+document.querySelectorAll('[data-c]').forEach(b=>b.addEventListener('click',()=>{
+  const el=document.getElementById(b.dataset.c),old=b.textContent;
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Markeret';setTimeout(()=>b.textContent=old,1500)};
+  try{navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent='Kopieret';setTimeout(()=>b.textContent=old,1500)},sel)}catch(e){sel()}
+}));
+</script>
+</body>
+</html>
