@@ -61,7 +61,7 @@ section{padding-block:80px}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
-.logo b{font:700 22px var(--h);color:var(--green-dark);letter-spacing:-.01em}
+.logo b{font:700 clamp(15px,3.9vw,20px) var(--h);color:var(--green-dark);letter-spacing:-.01em}
 .logo span{font-size:12px;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
 .menu{display:flex;align-items:center;gap:30px}
 .menu a{font:500 15px var(--h);color:var(--ink);text-decoration:none}
@@ -123,6 +123,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .hero .wrap{width:100%}
 .hero h1{color:var(--white);font-size:clamp(36px,4.6vw,56px);font-weight:700;max-width:460px}
 .hero p{font-size:19px;max-width:420px;margin-top:18px;color:#E6EFEC}
+.hero p.tagline{font-size:14.5px;letter-spacing:.02em;color:#9FD3C3;margin-top:14px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .badge{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:28px;background:var(--white);color:var(--ink);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);text-decoration:none}
 .badge b{font:700 28px var(--h)}
@@ -346,7 +347,7 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="./"><b>Sarahs Fys</b><span>Træning &amp; Fysioterapi</span></a>
+    <a class="logo" href="./"><b>Sarahs Træning &amp; Fysioterapi</b><span>Fysioterapeut i Aalborg Ø</span></a>
     <nav class="menu" id="menu" aria-label="Hovedmenu">
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-beh">Behandlinger<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button>
@@ -354,7 +355,7 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
           <a href="fysioterapi/"><b>Fysioterapi</b><span>Ryg, nakke, skulder, knæ og meget mere</span></a>
           <a href="rejsningsproblemer/" class="hl"><b>Rejsningsproblemer <em>Speciale</em></b><span>Diskret behandling med shockwave</span></a>
           <a href="shockwave-og-laser/"><b>Shockwave og laser</b><span>Hælspore, sener og muskelskader</span></a>
-          <a href="massage/"><b>Massage og cupping</b><span>Fysio-massage og gravidmassage</span></a>
+          <a href="massage/"><b>Massage og cupping</b><span>Fysio-massage og cupping</span></a>
           <a href="oresten-og-svimmelhed/"><b>Svimmelhed og øresten</b><span>Undersøgelse, behandling og øvelser</span></a>
           <a href="hjemmebehandling-og-firmaaftaler/"><b>Hjemmebehandling og firma</b><span>Jeg kommer ud til dig</span></a>
         </div>
@@ -375,7 +376,8 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     <img data-rediger-billede="forside-billede-1" class="hero-bg" src="images/hero.webp" alt="Sarah giver massage i klinikken" fetchpriority="high">
     <div class="wrap">
       <h1 data-rediger="forside-h1-1">Fysioterapi i Aalborg Ø</h1>
-      <p data-rediger="forside-p-2">Har du ondt i ryggen, nakken eller knæet? Hos mig får du god tid, en grundig undersøgelse og en behandling, der passer til lige præcis dig.</p>
+      <p data-rediger="forside-p-2">Ondt, spændt eller noget, der ikke fungerer helt, som det skal? Hos mig får du tid, nærvær og en behandling med udgangspunkt i dig og dine behov.</p>
+      <p class="tagline" data-rediger="forside-p-3">Fysioterapi · Massage · Personlig behandling · Specialiseret hjælp ved rejsningsproblemer</p>
       <div class="cta">
         <a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
         <a class="btn btn-white-line" href="#behandlinger">Se behandlinger</a>
@@ -389,8 +391,8 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 
   <div class="usp">
     <div class="wrap">
-      <div><svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="30" rx="3"/><path d="M14 4h12v5H14zM14 20l4 4 8-8"/></svg><p><b data-rediger="forside-b-3">Ingen henvisning</b><span data-rediger="forside-span-4">Du kan booke direkte hos mig</span></p></div>
-      <div><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l6 4"/></svg><p><b data-rediger="forside-b-5">Ingen ventetid</b><span data-rediger="forside-span-6">I klinikken eller hjemme hos dig</span></p></div>
+      <div><svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="30" rx="3"/><path d="M14 4h12v5H14zM14 20l4 4 8-8"/></svg><p><b data-rediger="forside-b-4">Ingen henvisning</b><span data-rediger="forside-span-5">Du kan booke direkte hos mig</span></p></div>
+      <div><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 12v8l6 4"/></svg><p><b data-rediger="forside-b-6">Ingen ventetid</b></p></div>
       <div><svg viewBox="0 0 40 40"><path d="M20 5l4.5 9.5 10.5 1.3-7.7 7.2 2 10.4L20 28.3l-9.3 5.1 2-10.4L5 15.8l10.5-1.3z"/></svg><p><b data-rediger="forside-b-7">4,8 af 5 stjerner</b><span data-rediger="forside-span-8">96 % af mine anmeldelser er 5 stjerner</span></p></div>
     </div>
   </div>
@@ -399,23 +401,23 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     <div class="wrap">
       <div class="center">
         <h2 data-rediger="forside-h2-9">Behandlinger</h2>
-        <p class="intro" data-rediger="forside-p-10">Jeg undersøger og behandler hele kroppen, fra nakke og ryg til knæ og hæl. Mine specialer er Mulligan, rejsningsproblemer og MediYoga for både voksne og børn.</p>
+        <p class="intro" data-rediger="forside-p-10">Jeg undersøger og behandler hele kroppen, fra nakke og ryg til knæ og hæl. Mine fagområder er erektil dysfunktion, shockwave og manuel behandling.</p>
       </div>
       <div class="cards">
         <article class="card">
           <div class="ph"><img data-rediger-billede="forside-billede-2" src="images/fysio.webp" alt="Sarah behandler en patients ben" loading="lazy"></div>
           <div class="in">
             <h3 data-rediger="forside-h3-11">Fysioterapi</h3>
-            <p data-rediger="forside-p-12">Ondt i ryggen, nakken, skulderen eller knæet? Jeg finder ud af, hvad der er galt, og behandler det. I klinikken eller hjemme hos dig.</p>
+            <p data-rediger="forside-p-12">Ondt i ryggen, nakken, skulderen eller knæet? Jeg finder ud af, hvad der er galt, og behandler det.</p>
             <a href="fysioterapi/">Læs mere om fysioterapi →</a>
           </div>
         </article>
         <article class="card">
-          <div class="ph"><img data-rediger-billede="forside-billede-3" src="images/massage.webp" alt="Sarah giver massage i klinikken" loading="lazy"></div>
+          <div class="ph"><img data-rediger-billede="forside-billede-3" src="images/samtale.webp" alt="Sarah i samtale med en patient" loading="lazy"></div>
           <div class="in">
-            <h3 data-rediger="forside-h3-13">Massage og gravidmassage</h3>
-            <p data-rediger="forside-p-14">Massage, der passer til netop dine spændinger og skavanker. Til dig, der trænger til at slappe af og komme dig. Jeg giver også gravidmassage.</p>
-            <a href="massage/">Læs mere om massage →</a>
+            <h3 data-rediger="forside-h3-13">Rejsningsproblemer</h3>
+            <p data-rediger="forside-p-14">Diskret behandling med fokuseret shockwave, uden medicin. Mange mænd går længe med det. Hos mig kan du tale frit.</p>
+            <a href="rejsningsproblemer/">Læs mere om behandlingen →</a>
           </div>
         </article>
         <article class="card">
@@ -431,15 +433,15 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
       <div class="more">
         <div><h3 data-rediger="forside-h3-17">Jeg tilbyder også</h3><p style="margin-top:8px" data-rediger="forside-p-18">I tvivl om, hvad der passer til dig? Ring til mig, så finder vi ud af det sammen.</p></div>
         <ul>
-          <li><a href="oresten-og-svimmelhed/">Øresten og svimmelhed</a></li>
-          <li><a href="rejsningsproblemer/">Rejsningsproblemer (ED)</a></li>
-          <li><a href="fysioterapi/">Mulligan-konceptet</a></li>
           <li><a href="massage/">Cupping</a></li>
           <li><a href="hjemmebehandling-og-firmaaftaler/">Hjemmebehandling</a></li>
+          <li><a href="hold-og-traening/">Online træning</a></li>
+          <li><a href="massage/">Massage</a></li>
+          <li><a href="fysioterapi/">Mulligan-behandling</a></li>
           <li><a href="hjemmebehandling-og-firmaaftaler/">Firmaaftaler</a></li>
           <li><a href="hold-og-traening/">FysioFlow</a></li>
+          <li><a href="fysioterapi/">Styrke- og genoptræning</a></li>
           <li><a href="hold-og-traening/">MediYoga og MediYoga Kidz</a></li>
-          <li><a href="hold-og-traening/">Online træning</a></li>
         </ul>
       </div>
     </div>
@@ -447,7 +449,7 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 
   <section class="ed" id="rejsningsproblemer">
     <div class="wrap">
-      <img data-rediger-billede="forside-billede-5" src="images/samtale.webp" alt="Sarah i samtale med en patient" loading="lazy">
+      <img data-rediger-billede="forside-billede-5" src="images/ryg.webp" alt="Sarah ved skrivebordet i klinikken" loading="lazy">
       <div>
         <span class="tag" data-rediger="forside-span-19">Mit speciale</span>
         <h2 data-rediger="forside-h2-20">Rejsningsproblemer? Du er langt fra alene</h2>
@@ -455,7 +457,7 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
         <ul class="ed-facts">
           <li><b data-rediger="forside-b-22">60 %</b><span data-rediger="forside-span-23">af mænd over 60 oplever det</span></li>
           <li><b data-rediger="forside-b-24">Ca. 70 %</b><span data-rediger="forside-span-25">mærker effekt af behandlingen</span></li>
-          <li><b data-rediger="forside-b-26">15–20 min</b><span data-rediger="forside-span-27">tager en behandling</span></li>
+          <li><b data-rediger="forside-b-26">20–30 min</b><span data-rediger="forside-span-27">tager en behandling (første gang 60 min)</span></li>
           <li><b data-rediger="forside-b-28">Ingen</b><span data-rediger="forside-span-29">medicin og ingen kendte bivirkninger</span></li>
         </ul>
         <div class="cta">
@@ -471,22 +473,24 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
     <div class="wrap split">
       <div class="frame"><img data-rediger-billede="forside-billede-6" class="portrait" src="images/portraet.webp" alt="Portræt af fysioterapeut Sarah" loading="lazy"></div>
       <div class="txt">
-        <h2 data-rediger="forside-h2-31">Hej, jeg hedder Sarah</h2>
-        <p data-rediger="forside-p-32">Jeg blev uddannet fysioterapeut i Aalborg i 2011. Oprindeligt er jeg fra Vallensbæk, men jeg flyttede til Aalborg i 2008, og her er jeg blevet.</p>
-        <p data-rediger="forside-p-33">Siden har jeg arbejdet på flere klinikker i Nordjylland og hjulpet alle slags mennesker: vederlagsfrie patienter, plejehjemsbeboere, folk der får behandling hjemme, og dem der bare gerne vil i bedre form. I mange år har jeg også undervist på hold hos bl.a. Fokus Fitness.</p>
-        <p data-rediger="forside-p-34">Jeg går meget op i at være fagligt skarp, så jeg tager hele tiden nye kurser. Og så tager jeg mig altid tid til at lytte. Det er dig, der kender din krop bedst.</p>
-        <details class="edu"><summary data-rediger="forside-summary-35">Se mine efteruddannelser</summary>
+        <h2 data-rediger="forside-h2-31">Lidt om mig, og hvorfor du er i gode hænder</h2>
+        <p data-rediger="forside-p-32">Jeg hedder Sarah Olsen og blev uddannet fysioterapeut i Aalborg i 2011. Siden da har jeg arbejdet på flere klinikker i Nordjylland, hvor jeg har mødt og hjulpet mennesker med vidt forskellige behov, fra smerter og skader til genoptræning, kroniske problematikker og ønsket om en stærkere og mere velfungerende krop.</p>
+        <p data-rediger="forside-p-33">I dag driver jeg min egen klinik, Sarahs Træning &amp; Fysioterapi, hvor jeg tilbyder personlig behandling med udgangspunkt i dig og din hverdag.</p>
+        <p data-rediger="forside-p-34">Min faglige værktøjskasse spænder bredt. Jeg kombinerer fysioterapi, massage og genoptræning med behandlingsmetoder som shockwave og laserterapi. Derudover har jeg specialiseret mig i behandling af rejsningsproblemer, et område, hvor jeg gerne vil gøre det lettere at søge hjælp og tale åbent om noget, der kan være svært.</p>
+        <p data-rediger="forside-p-35">Jeg brænder for mit fag og prioriterer løbende efteruddannelse, så jeg hele tiden kan udvikle mine kompetencer og tilbyde behandling med et solidt fagligt fundament.</p>
+        <p data-rediger="forside-p-36">For mig handler god behandling ikke kun om teknikker og metoder. Det handler også om at blive lyttet til, taget alvorligt og mødt som det menneske, man er. Du kender din krop bedst. Min opgave er at lytte, undersøge og sammen med dig finde den behandling, der giver mening for netop dig, med fokus på et resultat, der holder.</p>
+        <details class="edu"><summary data-rediger="forside-summary-37">Se mine efteruddannelser</summary>
         <ul>
-          <li data-rediger="forside-li-36">Certificeret CMP i Mulligan-metoden</li>
-          <li data-rediger="forside-li-37">Mulligan-kursus om dysfunktioner i bækkenet (Mark Oliver)</li>
-          <li data-rediger="forside-li-38">Behandling af erektil dysfunktion</li>
-          <li data-rediger="forside-li-39">MediYoga-instruktøruddannelse og MediYoga Kidz</li>
-          <li data-rediger="forside-li-40">FysioFlow-uddannelse og funktionel træning med fokus på rectus diastase og bækkenbund (Elin Solheim)</li>
-          <li data-rediger="forside-li-41">Den naturlige fascie</li>
-          <li data-rediger="forside-li-42">Bækkenets biomekanik</li>
-          <li data-rediger="forside-li-43">Arvævsbehandling af kejsersnit og maveregionen</li>
-          <li data-rediger="forside-li-44">Certificeret i Mercier Therapy og fertilitetsfremmende behandling ad modum Mojzisova</li>
-          <li data-rediger="forside-li-45">Kæbeproblematikker, skulderkursus, akupunktur (grundkursus), Kinesio Tape KT1 og cupping</li>
+          <li data-rediger="forside-li-38">Certificeret CMP i Mulligan-metoden</li>
+          <li data-rediger="forside-li-39">Mulligan-kursus om dysfunktioner i bækkenet (Mark Oliver)</li>
+          <li data-rediger="forside-li-40">Behandling af erektil dysfunktion</li>
+          <li data-rediger="forside-li-41">MediYoga-instruktøruddannelse og MediYoga Kidz</li>
+          <li data-rediger="forside-li-42">FysioFlow-uddannelse og funktionel træning med fokus på rectus diastase og bækkenbund (Elin Solheim)</li>
+          <li data-rediger="forside-li-43">Den naturlige fascie</li>
+          <li data-rediger="forside-li-44">Bækkenets biomekanik</li>
+          <li data-rediger="forside-li-45">Arvævsbehandling af kejsersnit og maveregionen</li>
+          <li data-rediger="forside-li-46">Certificeret i Mercier Therapy og fertilitetsfremmende behandling ad modum Mojzisova</li>
+          <li data-rediger="forside-li-47">Kæbeproblematikker, skulderkursus, akupunktur (grundkursus), Kinesio Tape KT1 og cupping</li>
         </ul></details>
         <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-solid" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid hos mig</a><a class="btn btn-line" href="om-mig/">Læs mere om mig</a></div>
       </div>
@@ -496,50 +500,50 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   <section class="reviews" id="priser">
     <div class="wrap">
       <div class="center">
-        <h2 data-rediger="forside-h2-46">Priser</h2>
-        <p class="intro" data-rediger="forside-p-47">Tjek gerne, om du kan få tilskud fra en sundhedsforsikring, fx privat eller via dit arbejde. Jeg afregner direkte med de fleste forsikringer.</p>
+        <h2 data-rediger="forside-h2-48">Priser</h2>
+        <p class="intro" data-rediger="forside-p-49">Der er tilskud fra Sygeforsikring "danmark" til alle behandlinger: 140 kr. til første behandling og 90 kr. til de følgende. Har du en sundhedsforsikring, kan den ofte også dække.</p>
       </div>
       <div class="price-grid">
-        <div class="ptable"><h3 data-rediger="forside-h3-48">Fysioterapi</h3><table>
-          <tr><td><span data-rediger="forside-span-49">1. konsultation, 45 min</span><small data-rediger="forside-small-50">Tilskud fra Sygeforsikring "danmark": 140 kr.</small></td><td data-rediger="forside-td-51">500 kr.</td></tr>
-          <tr><td data-rediger="forside-td-52">1. konsultation, 60 min</td><td data-rediger="forside-td-53">650 kr.</td></tr>
-          <tr><td><span data-rediger="forside-span-54">Konsultation, 30 min</span><small data-rediger="forside-small-55">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="forside-td-56">335 kr.</td></tr>
-          <tr><td data-rediger="forside-td-57">Konsultation, 45 min</td><td data-rediger="forside-td-58">500 kr.</td></tr>
-          <tr><td><span data-rediger="forside-span-59">Studerende, 30 min</span><small data-rediger="forside-small-60">Husk at sige, at du studerer</small></td><td data-rediger="forside-td-61">300 kr.</td></tr>
+        <div class="ptable"><h3 data-rediger="forside-h3-50">Fysioterapi</h3><table>
+          <tr><td><span data-rediger="forside-span-51">1. konsultation, 45 min</span><small data-rediger="forside-small-52">Tilskud fra Sygeforsikring "danmark": 140 kr.</small></td><td data-rediger="forside-td-53">500 kr.</td></tr>
+          <tr><td data-rediger="forside-td-54">1. konsultation, 60 min</td><td data-rediger="forside-td-55">650 kr.</td></tr>
+          <tr><td><span data-rediger="forside-span-56">Behandling, 30 min</span><small data-rediger="forside-small-57">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="forside-td-58">335 kr.</td></tr>
+          <tr><td data-rediger="forside-td-59">Behandling, 45 min</td><td data-rediger="forside-td-60">500 kr.</td></tr>
+          <tr><td><span data-rediger="forside-span-61">Studerende, 30 min</span><small data-rediger="forside-small-62">Husk at sige, at du studerer</small></td><td data-rediger="forside-td-63">300 kr.</td></tr>
         </table></div>
-        <div class="ptable"><h3 data-rediger="forside-h3-62">Massage</h3><table>
-          <tr><td><span data-rediger="forside-span-63">Fysio-massage / gravidmassage, 30 min</span><small data-rediger="forside-small-64">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="forside-td-65">365 kr.</td></tr>
-          <tr><td data-rediger="forside-td-66">Fysio-massage / gravidmassage, 60 min</td><td data-rediger="forside-td-67">680 kr.</td></tr>
-        </table><h3 style="margin-top:22px" data-rediger="forside-h3-68">Rejsningsproblemer</h3><table>
-          <tr><td><span data-rediger="forside-span-69">Konsultation</span><small data-rediger="forside-small-70">Det videre forløb skræddersys. Tilskud: 90 kr.</small></td><td data-rediger="forside-td-71">950 kr.</td></tr>
+        <div class="ptable"><h3 data-rediger="forside-h3-64">Massage</h3><table>
+          <tr><td><span data-rediger="forside-span-65">Fysio-massage, 30 min</span><small data-rediger="forside-small-66">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="forside-td-67">365 kr.</td></tr>
+          <tr><td data-rediger="forside-td-68">Fysio-massage, 60 min</td><td data-rediger="forside-td-69">680 kr.</td></tr>
+        </table><h3 style="margin-top:22px" data-rediger="forside-h3-70">Rejsningsproblemer</h3><table>
+          <tr><td><span data-rediger="forside-span-71">1. konsultation</span><small data-rediger="forside-small-72">Tilskud fra Sygeforsikring "danmark": 140 kr. Det videre forløb lægger vi sammen.</small></td><td data-rediger="forside-td-73">950 kr.</td></tr>
         </table></div>
-        <div class="ptable"><h3 data-rediger="forside-h3-72">Shockwave, laser og cupping</h3><table>
-          <tr><td data-rediger="forside-td-73">Shockwave</td><td data-rediger="forside-td-74">315 kr.</td></tr>
-          <tr><td data-rediger="forside-td-75">Laser</td><td data-rediger="forside-td-76">315 kr.</td></tr>
-          <tr><td><span data-rediger="forside-span-77">Cupping, 30 min</span><small data-rediger="forside-small-78">Studerende: 265 kr.</small></td><td data-rediger="forside-td-79">310 kr.</td></tr>
-        </table><p class="note" style="margin-top:8px" data-rediger="forside-p-80">Priserne gælder, hvis du kun skal have denne behandling.</p></div>
-        <div class="ptable"><h3 data-rediger="forside-h3-81">Hold og hjemmebehandling</h3><table>
-          <tr><td data-rediger="forside-td-82">FysioFlow, 10 gange</td><td data-rediger="forside-td-83">1.000 kr.</td></tr>
-          <tr><td data-rediger="forside-td-84">FysioFlow, drop-in</td><td data-rediger="forside-td-85">125 kr.</td></tr>
-          <tr><td><span data-rediger="forside-span-86">Udendørs træning, 12 gange</span><small data-rediger="forside-small-87">Eller 45 kr. pr. gang</small></td><td data-rediger="forside-td-88">400 kr.</td></tr>
-          <tr><td><span data-rediger="forside-span-89">Hjemmebehandling</span><small data-rediger="forside-small-90">+ kørselstillæg. Tilskud: 90 kr. + 10 kr. til kørsel</small></td><td data-rediger="forside-td-91">Efter aftale</td></tr>
+        <div class="ptable"><h3 data-rediger="forside-h3-74">Shockwave, laser og cupping</h3><table>
+          <tr><td data-rediger="forside-td-75">Shockwave</td><td data-rediger="forside-td-76">315 kr.</td></tr>
+          <tr><td data-rediger="forside-td-77">Laser</td><td data-rediger="forside-td-78">315 kr.</td></tr>
+          <tr><td><span data-rediger="forside-span-79">Cupping, 30 min</span><small data-rediger="forside-small-80">Studerende: 265 kr.</small></td><td data-rediger="forside-td-81">310 kr.</td></tr>
+        </table><p class="note" style="margin-top:8px" data-rediger="forside-p-82">Priserne gælder, hvis du kun skal have denne behandling.</p></div>
+        <div class="ptable"><h3 data-rediger="forside-h3-83">Hold og hjemmebehandling</h3><table>
+          <tr><td data-rediger="forside-td-84">FysioFlow, 10 gange</td><td data-rediger="forside-td-85">1.000 kr.</td></tr>
+          <tr><td data-rediger="forside-td-86">FysioFlow, drop-in</td><td data-rediger="forside-td-87">125 kr.</td></tr>
+          <tr><td><span data-rediger="forside-span-88">Udendørs træning, 12 gange</span><small data-rediger="forside-small-89">Eller 45 kr. pr. gang</small></td><td data-rediger="forside-td-90">400 kr.</td></tr>
+          <tr><td><span data-rediger="forside-span-91">Hjemmebehandling</span><small data-rediger="forside-small-92">+ kørselstillæg. Tilskud: 90 kr. + 10 kr. til kørsel</small></td><td data-rediger="forside-td-93">Efter aftale</td></tr>
         </table></div>
       </div>
-      <div class="pnote"><b data-rediger="forside-b-92">Godt at vide:</b> Tiden regnes fra du kommer ind ad døren, til du har betalt og evt. klædt om. Tag et lagen eller håndklæde med til briksen. Kan du ikke komme, så send mig en sms senest 24 timer før. Ellers koster det et udeblivelsesgebyr på 335 kr.</div>
+      <div class="pnote"><b data-rediger="forside-b-94">Godt at vide:</b> Tiden regnes fra du kommer ind ad døren, til du har betalt og evt. klædt om. Tag et lagen eller håndklæde med til briksen. Afbud skal ske senest 48 timer før, ellers koster det behandlingens pris. Der er en lille, rolig klinikhund, som indimellem er i klinikken.</div>
     </div>
   </section>
 
   <section id="hold">
     <div class="wrap">
       <div class="center">
-        <h2 data-rediger="forside-h2-93">Hold og træning</h2>
+        <h2 data-rediger="forside-h2-95">Hold og træning</h2>
         <p class="intro">Træn sammen med andre, mens jeg holder øje med, at du laver øvelserne rigtigt. Du tilmelder dig på mail. <a href="hold-og-traening/">Se alle hold og priser →</a></p>
       </div>
       <div class="classes">
-        <div class="cls"><h3 data-rediger="forside-h3-94">FysioFlow</h3><p data-rediger="forside-p-95">Til dig, der er stram og stiv. Vi strækker godt ud med rolige, yoga-agtige øvelser. Du kan også være med live online.</p><span class="where">Mandage kl. 16.30 · Trekanten, Aalborg Øst<br>Nyt hold starter 4. januar 2027</span></div>
-        <div class="cls"><h3 data-rediger="forside-h3-96">Udendørs træning</h3><p data-rediger="forside-p-97">Frisk luft, vægte og egen kropsvægt. Alle kan være med, og vi hygger os, mens vi træner.</p><span class="where" data-rediger="forside-span-98">Tirsdage kl. 19.15 · Nørre Tranders Kirkecenter</span></div>
-        <div class="cls"><h3 data-rediger="forside-h3-99">MediYoga og MediYoga Kidz</h3><p data-rediger="forside-p-100">Blid yoga med vejrtrækning og ro. Godt mod stress og smerter. Jeg har også forløb for børn og unge fra 2 til 17 år.</p><span class="where" data-rediger="forside-span-101">Hold, eneundervisning eller ude hos jer</span></div>
-        <div class="cls"><h3 data-rediger="forside-h3-102">Online træning</h3><p data-rediger="forside-p-103">Træn hjemme, når det passer dig. Blandet træning og FysioFlow på min medlemsside.</p><span class="where" data-rediger="forside-span-104">Fra 100 kr. pr. måned</span></div>
+        <div class="cls"><h3 data-rediger="forside-h3-96">FysioFlow</h3><p data-rediger="forside-p-97">Til dig, der er stram og stiv. Vi strækker godt ud med rolige, yoga-agtige øvelser. Du kan også være med live online.</p><span class="where">Mandage kl. 16.30 · Trekanten, Aalborg Øst<br>Nyt hold starter 4. januar 2027</span></div>
+        <div class="cls"><h3 data-rediger="forside-h3-98">Udendørs træning</h3><p data-rediger="forside-p-99">Frisk luft, vægte og egen kropsvægt. Alle kan være med, og vi hygger os, mens vi træner.</p><span class="where">Tirsdage kl. 19.15 · Nørre Tranders Kirkecenter<br>Nyt hold starter 2. marts 2027</span></div>
+        <div class="cls"><h3 data-rediger="forside-h3-100">MediYoga og MediYoga Kidz</h3><p data-rediger="forside-p-101">Blid yoga med vejrtrækning og ro. Godt mod stress og smerter. Jeg har også forløb for børn og unge fra 2 til 17 år.</p><span class="where" data-rediger="forside-span-102">Hold, eneundervisning eller ude hos jer</span></div>
+        <div class="cls"><h3 data-rediger="forside-h3-103">Online træning</h3><p data-rediger="forside-p-104">Træn hjemme, når det passer dig. Blandet træning og FysioFlow på min medlemsside.</p><span class="where" data-rediger="forside-span-105">Fra 100 kr. pr. måned</span></div>
       </div>
     </div>
   </section>
@@ -547,8 +551,8 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   <section class="reviews" id="anmeldelser">
     <div class="wrap">
       <div class="center">
-        <h2 data-rediger="forside-h2-105">Det siger mine kunder</h2>
-        <p class="intro" data-rediger="forside-p-106">4,8 ud af 5 stjerner baseret på 70 anmeldelser på Trustpilot.</p>
+        <h2 data-rediger="forside-h2-106">Det siger mine kunder</h2>
+        <p class="intro" data-rediger="forside-p-107">4,8 ud af 5 stjerner baseret på 70 anmeldelser på Trustpilot.</p>
       </div>
       <div class="marquee" tabindex="0" aria-label="Anmeldelser"><div class="track"><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Sarah er bare virkelig kompetent og dygtig. Hun brænder tydeligt for sit arbejde."</p><footer>Lea<span>Trustpilot, april 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Sahra er god til at fortælle hvad problemet er og hvordan det løses på en god og letforståelig måde."</p><footer>Erik<span>Trustpilot, september 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Man bliver altid mødt med godt humør og stor faglighed."</p><footer>Mads<span>Trustpilot, september 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Det er altid en god oplevelse at få behandling hos Sara. Professionel og alligevel hyggeligt."</p><footer>Lone<span>Trustpilot, juli 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Det er et rart sted at komme, der er en dejlig omgangstone på stedet, venlig og sød behandler."</p><footer>Jørgen<span>Trustpilot, oktober 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Jeg har brugt Sarah mange gange og altid med et godt resultat."</p><footer>Jeanette<span>Trustpilot, april 2026</span></footer></figure><figure class="rev"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Super sød og rigtig god behandling."</p><footer>Carsten<span>Trustpilot, april 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Sarah er bare virkelig kompetent og dygtig. Hun brænder tydeligt for sit arbejde."</p><footer>Lea<span>Trustpilot, april 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Sahra er god til at fortælle hvad problemet er og hvordan det løses på en god og letforståelig måde."</p><footer>Erik<span>Trustpilot, september 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Man bliver altid mødt med godt humør og stor faglighed."</p><footer>Mads<span>Trustpilot, september 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Det er altid en god oplevelse at få behandling hos Sara. Professionel og alligevel hyggeligt."</p><footer>Lone<span>Trustpilot, juli 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Det er et rart sted at komme, der er en dejlig omgangstone på stedet, venlig og sød behandler."</p><footer>Jørgen<span>Trustpilot, oktober 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Jeg har brugt Sarah mange gange og altid med et godt resultat."</p><footer>Jeanette<span>Trustpilot, april 2026</span></footer></figure><figure class="rev" aria-hidden="true"><span class="stars" aria-label="5 stjerner"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><p>"Super sød og rigtig god behandling."</p><footer>Carsten<span>Trustpilot, april 2026</span></footer></figure></div></div>
       <!-- TRUSTPILOT: indsæt TrustBox-kode fra Trustpilot Business her (kræver Sarahs login). Live-widget erstatter de faste citater ovenfor. -->
@@ -558,16 +562,16 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 
   <section id="faq">
     <div class="wrap">
-      <h2 class="center" data-rediger="forside-h2-107">Ofte stillede spørgsmål</h2>
+      <h2 class="center" data-rediger="forside-h2-108">Ofte stillede spørgsmål</h2>
       <div class="faq">
-        <details><summary data-rediger="forside-summary-108">Skal jeg have en henvisning fra lægen?</summary><p data-rediger="forside-p-109">Nej, du kan booke direkte hos mig. Har du en henvisning, så tag den bare med.</p></details>
-        <details><summary data-rediger="forside-summary-110">Kan jeg få tilskud?</summary><p data-rediger="forside-p-111">Er du medlem af Sygeforsikring "danmark", får du tilskud, fx 140 kr. til første konsultation og 90 kr. til almindelige konsultationer. Mange sundhedsforsikringer dækker også fysioterapi.</p></details>
-        <details><summary data-rediger="forside-summary-112">Hvad skal jeg have på?</summary><p data-rediger="forside-p-113">Tøj du kan bevæge dig i, fx shorts og t-shirt, så jeg kan komme til at undersøge og behandle det sted, der gør ondt.</p></details>
-        <details><summary data-rediger="forside-summary-114">Hvad hvis jeg bliver forhindret?</summary><p data-rediger="forside-p-115">Så send mig en sms eller ring senest 24 timer før. Melder du afbud senere, eller kommer du ikke, koster det 335 kr.</p></details>
-        <details><summary data-rediger="forside-summary-116">Afregner du direkte med min forsikring?</summary><p data-rediger="forside-p-117">Ja, med de fleste. Nogle forsikringer skal du selv afregne med bagefter. Forsikringen giver tilskud efter sine egne regler, så der kan være lidt egenbetaling.</p></details>
-        <details><summary data-rediger="forside-summary-118">Hvornår har klinikken åbent?</summary><p data-rediger="forside-p-119">Jeg har ikke faste åbningstider. Ring, skriv eller book online, så finder vi en tid, der passer dig. Der er ingen ventetid.</p></details>
-        <details><summary data-rediger="forside-summary-120">Kan du komme hjem til mig?</summary><p data-rediger="forside-p-121">Ja. Vi aftaler det sammen, og jeg tager selv udstyret med. Bor du mere end 5 km fra klinikken, lægger jeg et kørselstillæg til.</p></details>
-        <details><summary data-rediger="forside-summary-122">Laver du firmaaftaler?</summary><p data-rediger="forside-p-123">Ja. Skriv eller ring, så laver jeg et tilbud på fysioterapi, massage eller træning til jeres medarbejdere. Det er fuldt fradragsberettiget.</p></details>
+        <details><summary data-rediger="forside-summary-109">Kan jeg få tilskud, når jeg har en henvisning fra lægen?</summary><p data-rediger="forside-p-110">Nej, desværre. Det skyldes, at jeg ikke har et ydernummer. Men du må gerne komme, selvom du har en henvisning. Jeg kan stadig læse den og tale med din læge, hvis det bliver relevant.</p></details>
+        <details><summary data-rediger="forside-summary-111">Hvorfor har du ikke et ydernummer?</summary><p data-rediger="forside-p-112">Fordi jeg har valgt at være fri fysioterapeut. Så kan jeg selv sætte rammerne og lægge behandlingsforløb, præcis som mine klienter har brug for, uden at være bundet af systemets krav.</p></details>
+        <details><summary data-rediger="forside-summary-113">Kan jeg få tilskud fra andre steder?</summary><p data-rediger="forside-p-114">Ja. Du kan få tilskud gennem din private sundhedsforsikring og fra Sygeforsikring "danmark". Med tilskuddet får du ofte dækket mellem 50 og 80 % af det fulde honorar.</p></details>
+        <details><summary data-rediger="forside-summary-115">Kan jeg bruge min sundhedsforsikring?</summary><p data-rediger="forside-p-116">Ja. Ring eller skriv til dit forsikringsselskab og fortæl om dit problem. Så sender de dig en betalingsgaranti, som du tager med eller sender til mig. Nogle forsikringer vil hellere betale dig, så du får pengene refunderet, når du har betalt hos mig. Og husk, at du altid har frit valg af behandler.</p></details>
+        <details><summary data-rediger="forside-summary-117">Hvad hvis jeg bliver forhindret?</summary><p data-rediger="forside-p-118">Så meld afbud senest 48 timer før. Melder du afbud senere, eller kommer du ikke, koster det behandlingens pris.</p></details>
+        <details><summary data-rediger="forside-summary-119">Hvornår har klinikken åbent?</summary><p data-rediger="forside-p-120">Jeg har ikke faste åbningstider. Ring, skriv eller book online, så finder vi en tid, der passer dig. Der er ingen ventetid.</p></details>
+        <details><summary data-rediger="forside-summary-121">Kan du komme hjem til mig?</summary><p data-rediger="forside-p-122">Ja. Vi aftaler det sammen, og jeg tager selv udstyret med. Bor du mere end 5 km fra klinikken, lægger jeg et kørselstillæg til.</p></details>
+        <details><summary data-rediger="forside-summary-123">Laver du firmaaftaler?</summary><p data-rediger="forside-p-124">Ja. Skriv eller ring, så laver jeg et tilbud på fysioterapi, massage eller træning til jeres medarbejdere. Det er fuldt fradragsberettiget.</p></details>
       </div>
     </div>
   </section>
@@ -575,8 +579,8 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
   <section class="contact" id="kontakt">
     <div class="wrap">
       <div class="center">
-        <h2 data-rediger="forside-h2-124">Book tid</h2>
-        <p class="intro" data-rediger="forside-p-125">Jeg har ikke faste åbningstider, så vi finder en tid, der passer dig. Book online, ring, skriv eller udfyld formularen. Der er ingen ventetid.</p>
+        <h2 data-rediger="forside-h2-125">Book tid</h2>
+        <p class="intro" data-rediger="forside-p-126">Jeg har ikke faste åbningstider, så vi finder en tid, der passer dig. Book online, ring, skriv eller udfyld formularen. Der er ingen ventetid.</p>
       </div>
       <div class="c-layout">
         <form class="lead-form" id="lead" novalidate data-endpoint="">
@@ -590,7 +594,7 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
           <div class="field"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
           <div class="field"><label for="f-type">Hvad drejer det sig om?</label>
             <select id="f-type" name="opgave">
-              <option>Fysioterapi</option><option>Massage / gravidmassage</option><option>Shockwave / laser</option>
+              <option>Fysioterapi</option><option>Massage / cupping</option><option>Shockwave / laser</option>
               <option>Rejsningsproblemer</option><option>Øresten / svimmelhed</option><option>Hold og træning</option>
               <option>Hjemmebehandling</option><option>Firmaaftale</option><option>Andet</option>
             </select></div>
@@ -603,15 +607,16 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
             </div></fieldset>
           <div class="field full"><label for="f-msg">Fortæl kort om dine gener (valgfrit)</label><textarea id="f-msg" name="besked" placeholder="Fx: ondt i lænden i 3 uger, værst om morgenen"></textarea></div>
           <label class="consent"><input type="checkbox" id="f-ok" name="samtykke" required><span>Jeg accepterer, at Sarah kontakter mig om min henvendelse.</span></label>
+          <label class="consent"><input type="checkbox" id="f-nyhed" name="nyhedsbrev" value="ja"><span>Ja tak, jeg vil gerne have nyhedsbrev og gode tilbud. Du kan altid afmelde med et klik.</span></label>
           <p class="err" id="f-err" hidden></p>
           <button class="btn btn-solid" type="submit">Send forespørgsel</button>
           <div class="form-msg" id="f-done" hidden></div>
         </form>
         <div class="c-side">
-        <div class="c-box"><h3 data-rediger="forside-h3-126">Book online</h3><p data-rediger="forside-p-127">Find en ledig tid i min kalender.</p><a class="btn btn-solid" style="align-self:flex-start" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a></div>
-        <div class="c-box"><h3 data-rediger="forside-h3-128">Telefon</h3><span class="big" id="c1" data-rediger="forside-span-129">26 82 03 03</span><button type="button" data-c="c1">Kopiér nummer</button></div>
-        <div class="c-box"><h3 data-rediger="forside-h3-130">E-mail</h3><span class="big" id="c2" data-rediger="forside-span-131">sarahsfys@gmail.com</span><button type="button" data-c="c2">Kopiér e-mail</button></div>
-        <div class="c-box"><h3 data-rediger="forside-h3-132">Adresse</h3><span class="big" id="c3" data-rediger="forside-span-133">Sahlvej 1, 9220 Aalborg Ø</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Sahlvej+1+9220+Aalborg" target="_blank" rel="noopener">Find vej på Google Maps →</a></div>
+        <div class="c-box"><h3 data-rediger="forside-h3-127">Book online</h3><p data-rediger="forside-p-128">Find en ledig tid i min kalender.</p><a class="btn btn-solid" style="align-self:flex-start" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a></div>
+        <div class="c-box"><h3 data-rediger="forside-h3-129">Telefon</h3><span class="big" id="c1" data-rediger="forside-span-130">26 82 03 03</span><button type="button" data-c="c1">Kopiér nummer</button></div>
+        <div class="c-box"><h3 data-rediger="forside-h3-131">E-mail</h3><span class="big" id="c2" data-rediger="forside-span-132">sarahsfys@gmail.com</span><button type="button" data-c="c2">Kopiér e-mail</button></div>
+        <div class="c-box"><h3 data-rediger="forside-h3-133">Adresse</h3><span class="big" id="c3" data-rediger="forside-span-134">Sahlvej 1, 9220 Aalborg Ø</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Sahlvej+1+9220+Aalborg" target="_blank" rel="noopener">Find vej på Google Maps →</a></div>
         </div>
       </div>
     </div>

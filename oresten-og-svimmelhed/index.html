@@ -61,7 +61,7 @@ section{padding-block:80px}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
-.logo b{font:700 22px var(--h);color:var(--green-dark);letter-spacing:-.01em}
+.logo b{font:700 clamp(15px,3.9vw,20px) var(--h);color:var(--green-dark);letter-spacing:-.01em}
 .logo span{font-size:12px;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
 .menu{display:flex;align-items:center;gap:30px}
 .menu a{font:500 15px var(--h);color:var(--ink);text-decoration:none}
@@ -123,6 +123,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .hero .wrap{width:100%}
 .hero h1{color:var(--white);font-size:clamp(36px,4.6vw,56px);font-weight:700;max-width:460px}
 .hero p{font-size:19px;max-width:420px;margin-top:18px;color:#E6EFEC}
+.hero p.tagline{font-size:14.5px;letter-spacing:.02em;color:#9FD3C3;margin-top:14px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .badge{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:28px;background:var(--white);color:var(--ink);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);text-decoration:none}
 .badge b{font:700 28px var(--h)}
@@ -440,7 +441,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="../#top"><b>Sarahs Fys</b><span>Træning &amp; Fysioterapi</span></a>
+    <a class="logo" href="../#top"><b>Sarahs Træning &amp; Fysioterapi</b><span>Fysioterapeut i Aalborg Ø</span></a>
     <nav class="menu" id="menu" aria-label="Hovedmenu">
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-beh">Behandlinger<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button>
@@ -448,7 +449,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
           <a href="../fysioterapi/"><b>Fysioterapi</b><span>Ryg, nakke, skulder, knæ og meget mere</span></a>
           <a href="../rejsningsproblemer/" class="hl"><b>Rejsningsproblemer <em>Speciale</em></b><span>Diskret behandling med shockwave</span></a>
           <a href="../shockwave-og-laser/"><b>Shockwave og laser</b><span>Hælspore, sener og muskelskader</span></a>
-          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og gravidmassage</span></a>
+          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og cupping</span></a>
           <a href="../oresten-og-svimmelhed/"><b>Svimmelhed og øresten</b><span>Undersøgelse, behandling og øvelser</span></a>
           <a href="../hjemmebehandling-og-firmaaftaler/"><b>Hjemmebehandling og firma</b><span>Jeg kommer ud til dig</span></a>
         </div>

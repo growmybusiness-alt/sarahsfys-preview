@@ -61,7 +61,7 @@ section{padding-block:80px}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
-.logo b{font:700 22px var(--h);color:var(--green-dark);letter-spacing:-.01em}
+.logo b{font:700 clamp(15px,3.9vw,20px) var(--h);color:var(--green-dark);letter-spacing:-.01em}
 .logo span{font-size:12px;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
 .menu{display:flex;align-items:center;gap:30px}
 .menu a{font:500 15px var(--h);color:var(--ink);text-decoration:none}
@@ -123,6 +123,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .hero .wrap{width:100%}
 .hero h1{color:var(--white);font-size:clamp(36px,4.6vw,56px);font-weight:700;max-width:460px}
 .hero p{font-size:19px;max-width:420px;margin-top:18px;color:#E6EFEC}
+.hero p.tagline{font-size:14.5px;letter-spacing:.02em;color:#9FD3C3;margin-top:14px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .badge{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:28px;background:var(--white);color:var(--ink);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);text-decoration:none}
 .badge b{font:700 28px var(--h)}
@@ -440,7 +441,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="../#top"><b>Sarahs Fys</b><span>Træning &amp; Fysioterapi</span></a>
+    <a class="logo" href="../#top"><b>Sarahs Træning &amp; Fysioterapi</b><span>Fysioterapeut i Aalborg Ø</span></a>
     <nav class="menu" id="menu" aria-label="Hovedmenu">
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-beh">Behandlinger<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button>
@@ -448,7 +449,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
           <a href="../fysioterapi/"><b>Fysioterapi</b><span>Ryg, nakke, skulder, knæ og meget mere</span></a>
           <a href="../rejsningsproblemer/" class="hl"><b>Rejsningsproblemer <em>Speciale</em></b><span>Diskret behandling med shockwave</span></a>
           <a href="../shockwave-og-laser/"><b>Shockwave og laser</b><span>Hælspore, sener og muskelskader</span></a>
-          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og gravidmassage</span></a>
+          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og cupping</span></a>
           <a href="../oresten-og-svimmelhed/"><b>Svimmelhed og øresten</b><span>Undersøgelse, behandling og øvelser</span></a>
           <a href="../hjemmebehandling-og-firmaaftaler/"><b>Hjemmebehandling og firma</b><span>Jeg kommer ud til dig</span></a>
         </div>
@@ -479,21 +480,21 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
   <div class="wrap" style="padding-block:72px">
     <div class="p-body">
       <div class="p-main">
-        <section><h2 data-rediger="shockwave-og-laser-h2-3">Hvad er shockwave?</h2><p data-rediger="shockwave-og-laser-p-4">Shockwave er en hurtig og effektiv behandling af skader i sener og muskler. Trykbølgerne fra maskinen får blodet og ilten til at strømme til området, og det sætter gang i kroppens egen heling.</p><ul class='check'><li data-rediger="shockwave-og-laser-li-5">Hælspore</li><li data-rediger="shockwave-og-laser-li-6">Ondt i achillessenen</li><li data-rediger="shockwave-og-laser-li-7">Hoftesmerter</li><li data-rediger="shockwave-og-laser-li-8">Kalk i senerne</li><li data-rediger="shockwave-og-laser-li-9">Springerknæ</li><li data-rediger="shockwave-og-laser-li-10">Muskelskader</li><li data-rediger="shockwave-og-laser-li-11">Karpaltunnelsyndrom</li><li data-rediger="shockwave-og-laser-li-12">Rejsningsproblemer</li></ul></section><section><h2 data-rediger="shockwave-og-laser-h2-13">Hvor mange gange skal jeg komme?</h2><p data-rediger="shockwave-og-laser-p-14">Som regel behandler jeg én gang om ugen. Nogle er helt smertefri efter første gang, men de fleste skal have 3–6 behandlinger med 5–10 dages mellemrum for at få et resultat, der holder.</p><p data-rediger="shockwave-og-laser-p-15">Det kan gøre lidt ondt, mens jeg behandler, men det stopper, så snart maskinen er slukket. Shockwave virker ofte hurtigere end anden behandling på skader, der ellers er svære at få bugt med.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-16">Laser</h2><p data-rediger="shockwave-og-laser-p-17">Jeg bruger kold laser. Den brænder ikke, men stimulerer helingen. Lyset øger blodcirkulationen og giver cellerne omkring skaden ilt og næring, så kroppen kan reparere sig selv hurtigere.</p><p data-rediger="shockwave-og-laser-p-18">Laser gør slet ikke ondt, og den virker både smertelindrende og dæmper betændelse. De fleste skal have 3–10 behandlinger.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-19">Shockwave mod rejsningsproblemer</h2><p>Jeg bruger også fokuseret shockwave til at behandle rejsningsproblemer. <a href='rejsningsproblemer.html'>Læs mere om behandlingen her</a>.</p></section>
-        <section><h2 data-rediger="shockwave-og-laser-h2-20">Priser</h2><div class="ptable"><table><tr><td><span data-rediger="shockwave-og-laser-span-21">Shockwave</span><small data-rediger="shockwave-og-laser-small-22">Hvis du kun skal have denne behandling</small></td><td data-rediger="shockwave-og-laser-td-23">315 kr.</td></tr><tr><td><span data-rediger="shockwave-og-laser-span-24">Laser</span><small data-rediger="shockwave-og-laser-small-25">Hvis du kun skal have denne behandling</small></td><td data-rediger="shockwave-og-laser-td-26">315 kr.</td></tr></table></div><p class="note" style="margin-top:10px">Se <a href="../#priser">alle mine priser</a>. Tjek gerne, om din sundhedsforsikring dækker.</p></section>
-        <section><h2 data-rediger="shockwave-og-laser-h2-27">Spørgsmål og svar</h2><div><details><summary data-rediger="shockwave-og-laser-summary-28">Gør shockwave ondt?</summary><p data-rediger="shockwave-og-laser-p-29">Det kan gøre lidt ondt, mens jeg behandler, men det stopper med det samme bagefter.</p></details><details><summary data-rediger="shockwave-og-laser-summary-30">Hvor mange behandlinger skal jeg have?</summary><p data-rediger="shockwave-og-laser-p-31">Typisk 3–6 gange shockwave med 5–10 dages mellemrum. Ved laser oftest 3–10 gange.</p></details></div></section>
+        <section><h2 data-rediger="shockwave-og-laser-h2-3">Fokuseret shockwave</h2><p data-rediger="shockwave-og-laser-p-4">Fokuseret shockwave er en effektiv behandlingsmetode til skader og smerter i sener, muskler og andet væv. Behandlingen anvender fokuserede trykbølger, som påvirker vævet og stimulerer kroppens naturlige helingsprocesser.</p><p data-rediger="shockwave-og-laser-p-5">Trykbølgerne øger blodgennemstrømningen og ilttilførslen i det behandlede område og kan dermed understøtte vævets reparation og heling. Shockwave anvendes både ved længerevarende problematikker og skader, der kan være svære at komme af med gennem almindelig behandling.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-6">Hvad kan behandles med fokuseret shockwave?</h2><ul class='check'><li data-rediger="shockwave-og-laser-li-7">Hælspore og plantar fasciitis</li><li data-rediger="shockwave-og-laser-li-8">Smerter i achillessenen</li><li data-rediger="shockwave-og-laser-li-9">Hoftesmerter</li><li data-rediger="shockwave-og-laser-li-10">Forkalkninger i skulderens sener</li><li data-rediger="shockwave-og-laser-li-11">Tennisalbue og golfalbue</li><li data-rediger="shockwave-og-laser-li-12">Springerknæ og Osgood-Schlatter</li><li data-rediger="shockwave-og-laser-li-13">Knæsmerter og artrose</li><li data-rediger="shockwave-og-laser-li-14">Karpaltunnelsyndrom</li><li data-rediger="shockwave-og-laser-li-15">Spændinger og stivhed i ryggen</li><li data-rediger="shockwave-og-laser-li-16">Fibersprængninger og muskeloverbelastninger</li><li data-rediger="shockwave-og-laser-li-17">Rejsningsproblemer</li></ul></section><section><h2 data-rediger="shockwave-og-laser-h2-18">Hvor mange shockwave-behandlinger skal der til?</h2><p data-rediger="shockwave-og-laser-p-19">Jeg behandler som regel én gang om ugen. Nogle oplever en forbedring allerede efter første behandling, mens de fleste har behov for 3–6 behandlinger med cirka 5–10 dages mellemrum.</p><p data-rediger="shockwave-og-laser-p-20">Antallet af behandlinger afhænger af problematikken, hvor længe du har haft den, og hvordan du reagerer på behandlingen. Målet er at opnå en forbedring, der holder på længere sigt.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-21">Gør shockwave ondt?</h2><p data-rediger="shockwave-og-laser-p-22">Behandlingen kan opleves som øm eller ubehagelig, mens trykbølgerne rammer det påvirkede område. Ubehaget stopper, når behandlingen afsluttes. Intensiteten tilpasses løbende, så behandlingen passer til dig og din problematik.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-23">Kold laserbehandling</h2><p data-rediger="shockwave-og-laser-p-24">Kold laser er en mild og behagelig behandling, der anvendes til muskler, led og dybereliggende væv. Behandlingen gør ikke ondt og udvikler ikke varme, der brænder i vævet.</p><p data-rediger="shockwave-og-laser-p-25">Laserlyset stimulerer cellernes aktivitet og blodcirkulationen, så vævet får bedre adgang til ilt og næringsstoffer. Det understøtter kroppens naturlige helingsprocesser og kan samtidig virke smertelindrende og dæmpe inflammation.</p><p data-rediger="shockwave-og-laser-p-26">Kold laser kan anvendes ved både akutte og kroniske smerter og er blandt andet relevant ved:</p><ul class='check'><li data-rediger="shockwave-og-laser-li-27">Lændesmerter</li><li data-rediger="shockwave-og-laser-li-28">Nakkesmerter</li><li data-rediger="shockwave-og-laser-li-29">Iskiassymptomer</li><li data-rediger="shockwave-og-laser-li-30">Hævede led efter forstuvninger eller overbelastning</li><li data-rediger="shockwave-og-laser-li-31">Leddegigt, slidgigt, urinsyregigt og psoriasisgigt</li><li data-rediger="shockwave-og-laser-li-32">Andre inflammatoriske smerter</li></ul></section><section><h2 data-rediger="shockwave-og-laser-h2-33">Hvor mange laserbehandlinger skal der til?</h2><p data-rediger="shockwave-og-laser-p-34">De fleste har behov for 3–10 behandlinger afhængigt af problematikken og kroppens reaktion på behandlingen. Antallet vurderes individuelt.</p></section><section><h2 data-rediger="shockwave-og-laser-h2-35">Shockwave mod rejsningsproblemer</h2><p>Jeg bruger også fokuseret shockwave til at behandle rejsningsproblemer. <a href='rejsningsproblemer.html'>Læs mere om behandlingen her</a>.</p></section>
+        <section><h2 data-rediger="shockwave-og-laser-h2-36">Priser</h2><div class="ptable"><table><tr><td><span data-rediger="shockwave-og-laser-span-37">Shockwave</span><small data-rediger="shockwave-og-laser-small-38">Hvis du kun skal have denne behandling. Tilskud fra Sygeforsikring "danmark"</small></td><td data-rediger="shockwave-og-laser-td-39">315 kr.</td></tr><tr><td><span data-rediger="shockwave-og-laser-span-40">Laser</span><small data-rediger="shockwave-og-laser-small-41">Hvis du kun skal have denne behandling. Tilskud fra Sygeforsikring "danmark"</small></td><td data-rediger="shockwave-og-laser-td-42">315 kr.</td></tr></table></div><p class="note" style="margin-top:10px">Se <a href="../#priser">alle mine priser</a>. Tjek gerne, om din sundhedsforsikring dækker.</p></section>
+        
       </div>
       <aside class="p-side">
         <div class="side-box">
-          <h3 data-rediger="shockwave-og-laser-h3-32">Book tid</h3>
-          <p data-rediger="shockwave-og-laser-p-33">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
-          <span class="big" data-rediger="shockwave-og-laser-span-34">26 82 03 03</span>
-          <span data-rediger="shockwave-og-laser-span-35">sarahsfys@gmail.com</span>
+          <h3 data-rediger="shockwave-og-laser-h3-43">Book tid</h3>
+          <p data-rediger="shockwave-og-laser-p-44">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
+          <span class="big" data-rediger="shockwave-og-laser-span-45">26 82 03 03</span>
+          <span data-rediger="shockwave-og-laser-span-46">sarahsfys@gmail.com</span>
           <a class="btn btn-solid" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
           <a class="btn btn-line" href="../#kontakt">Bliv ringet op</a>
         </div>
         <div class="side-box">
-          <h3 data-rediger="shockwave-og-laser-h3-36">Behandlinger</h3>
+          <h3 data-rediger="shockwave-og-laser-h3-47">Behandlinger</h3>
           <ul><li><a href="../fysioterapi/">Fysioterapi</a></li><li><a href="../massage/">Massage og cupping</a></li><li><a href="../shockwave-og-laser/" aria-current="page">Shockwave og laser</a></li><li><a href="../rejsningsproblemer/">Rejsningsproblemer</a></li><li><a href="../oresten-og-svimmelhed/">Svimmelhed og øresten</a></li><li><a href="../hold-og-traening/">Hold og træning</a></li><li><a href="../hjemmebehandling-og-firmaaftaler/">Hjemmebehandling og firma</a></li></ul>
         </div>
       </aside>
@@ -502,7 +503,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
   <div class="cta-band">
     <div class="wrap">
-      <div><h2 data-rediger="shockwave-og-laser-h2-37">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="shockwave-og-laser-p-38">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
+      <div><h2 data-rediger="shockwave-og-laser-h2-48">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="shockwave-og-laser-p-49">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
       <a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
     </div>
   </div>

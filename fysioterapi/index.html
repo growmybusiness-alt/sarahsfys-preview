@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fysioterapi i Aalborg Ø | Sarahs Træning &amp; Fysioterapi</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Fysioterapi i Aalborg Ø uden henvisning og uden ventetid. Sarah undersøger og behandler hele kroppen, i klinikken eller hjemme hos dig.">
+<meta name="description" content="Fysioterapi i Aalborg Ø uden ventetid. Sarah undersøger og behandler hele kroppen med manuel behandling, shockwave, laser og træning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap">
@@ -61,7 +61,7 @@ section{padding-block:80px}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
-.logo b{font:700 22px var(--h);color:var(--green-dark);letter-spacing:-.01em}
+.logo b{font:700 clamp(15px,3.9vw,20px) var(--h);color:var(--green-dark);letter-spacing:-.01em}
 .logo span{font-size:12px;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
 .menu{display:flex;align-items:center;gap:30px}
 .menu a{font:500 15px var(--h);color:var(--ink);text-decoration:none}
@@ -123,6 +123,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backgroun
 .hero .wrap{width:100%}
 .hero h1{color:var(--white);font-size:clamp(36px,4.6vw,56px);font-weight:700;max-width:460px}
 .hero p{font-size:19px;max-width:420px;margin-top:18px;color:#E6EFEC}
+.hero p.tagline{font-size:14.5px;letter-spacing:.02em;color:#9FD3C3;margin-top:14px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .badge{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:28px;background:var(--white);color:var(--ink);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);text-decoration:none}
 .badge b{font:700 28px var(--h)}
@@ -421,7 +422,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 </style>
 <link rel="canonical" href="https://www.sarahsfys.dk/fysioterapi/">
 <meta property="og:title" content="Fysioterapi i Aalborg Ø | Sarahs Træning &amp; Fysioterapi">
-<meta property="og:description" content="Fysioterapi i Aalborg Ø uden henvisning og uden ventetid. Sarah undersøger og behandler hele kroppen, i klinikken eller hjemme hos dig.">
+<meta property="og:description" content="Fysioterapi i Aalborg Ø uden ventetid. Sarah undersøger og behandler hele kroppen med manuel behandling, shockwave, laser og træning.">
 <meta property="og:image" content="https://www.sarahsfys.dk/images/fysio.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.sarahsfys.dk/fysioterapi/">
@@ -440,7 +441,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="logo" href="../#top"><b>Sarahs Fys</b><span>Træning &amp; Fysioterapi</span></a>
+    <a class="logo" href="../#top"><b>Sarahs Træning &amp; Fysioterapi</b><span>Fysioterapeut i Aalborg Ø</span></a>
     <nav class="menu" id="menu" aria-label="Hovedmenu">
       <div class="dd">
         <button class="dd-btn" type="button" aria-expanded="false" aria-controls="dd-beh">Behandlinger<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button>
@@ -448,7 +449,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
           <a href="../fysioterapi/"><b>Fysioterapi</b><span>Ryg, nakke, skulder, knæ og meget mere</span></a>
           <a href="../rejsningsproblemer/" class="hl"><b>Rejsningsproblemer <em>Speciale</em></b><span>Diskret behandling med shockwave</span></a>
           <a href="../shockwave-og-laser/"><b>Shockwave og laser</b><span>Hælspore, sener og muskelskader</span></a>
-          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og gravidmassage</span></a>
+          <a href="../massage/"><b>Massage og cupping</b><span>Fysio-massage og cupping</span></a>
           <a href="../oresten-og-svimmelhed/"><b>Svimmelhed og øresten</b><span>Undersøgelse, behandling og øvelser</span></a>
           <a href="../hjemmebehandling-og-firmaaftaler/"><b>Hjemmebehandling og firma</b><span>Jeg kommer ud til dig</span></a>
         </div>
@@ -469,7 +470,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
       <div>
         <div class="crumbs"><a href="../">Forside</a> › <a href="../#behandlinger">Behandlinger</a> › Fysioterapi</div>
         <h1 data-rediger="fysioterapi-h1-1">Fysioterapi i Aalborg Ø</h1>
-        <p class="lead" data-rediger="fysioterapi-p-2">Ondt et sted i kroppen? Jeg finder ud af hvorfor og hjælper dig af med det. I klinikken eller hjemme hos dig.</p>
+        <p class="lead" data-rediger="fysioterapi-p-2">Ondt et sted i kroppen? Jeg finder ud af hvorfor og hjælper dig af med det.</p>
         <div class="cta"><a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a><a class="btn btn-white-line" href="tel:+4526820303">Ring 26 82 03 03</a></div>
       </div>
       <img data-rediger-billede="fysioterapi-billede-1" src="../images/fysio.webp" alt="Fysioterapi">
@@ -479,21 +480,21 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
   <div class="wrap" style="padding-block:72px">
     <div class="p-body">
       <div class="p-main">
-        <section><h2 data-rediger="fysioterapi-h2-3">Hvad kan jeg hjælpe med?</h2><p data-rediger="fysioterapi-p-4">Jeg undersøger og behandler hele kroppen. Det kan være smerter, der er kommet pludseligt, eller noget, der har drillet i lang tid. Jeg går meget op i at være fagligt skarp, så jeg tager hele tiden nye kurser og holder mig opdateret.</p><ul class='check'><li data-rediger="fysioterapi-li-5">Ondt i ryggen eller nakken</li><li data-rediger="fysioterapi-li-6">Skulder-, hofte- og knæsmerter</li><li data-rediger="fysioterapi-li-7">Sene- og muskelskader</li><li data-rediger="fysioterapi-li-8">Problemer i bækkenet</li><li data-rediger="fysioterapi-li-9">Kæbeproblemer</li><li data-rediger="fysioterapi-li-10">Arvæv efter kejsersnit</li><li data-rediger="fysioterapi-li-11">Svimmelhed og øresten</li><li data-rediger="fysioterapi-li-12">Genoptræning</li></ul></section><section><h2 data-rediger="fysioterapi-h2-13">Sådan foregår det</h2><ol class='steps'><li><div><b data-rediger="fysioterapi-b-14">Vi snakker sammen</b>Første gang starter vi med en god snak om, hvor det gør ondt, og hvordan din hverdag ser ud. Så undersøger jeg dig grundigt.</div></li><li><div><b data-rediger="fysioterapi-b-15">Du får behandling</b>Du får behandling allerede første gang. Det kan være manuel behandling, Mulligan, shockwave, laser, cupping eller massage.</div></li><li><div><b data-rediger="fysioterapi-b-16">Du træner</b>Du får øvelser med hjem, eller vi træner sammen i træningssalen eller online.</div></li><li><div><b data-rediger="fysioterapi-b-17">Vi følger op</b>Jeg justerer behandlingen hen ad vejen, til du er tilbage i din hverdag.</div></li></ol></section><section><h2 data-rediger="fysioterapi-h2-18">Mulligan-metoden</h2><p data-rediger="fysioterapi-p-19">Mulligan er udviklet af fysioterapeuten Brian Mulligan fra New Zealand. Jeg bevæger leddet, mens du selv laver bevægelsen, og mange mærker forskel med det samme. Jeg er certificeret CMP-behandler, så jeg har taget hele uddannelsen.</p></section>
-        <section><h2 data-rediger="fysioterapi-h2-20">Priser</h2><div class="ptable"><table><tr><td><span data-rediger="fysioterapi-span-21">1. konsultation, 45 min</span><small data-rediger="fysioterapi-small-22">Tilskud fra Sygeforsikring "danmark": 140 kr.</small></td><td data-rediger="fysioterapi-td-23">500 kr.</td></tr><tr><td data-rediger="fysioterapi-td-24">1. konsultation, 60 min</td><td data-rediger="fysioterapi-td-25">650 kr.</td></tr><tr><td><span data-rediger="fysioterapi-span-26">Konsultation, 30 min</span><small data-rediger="fysioterapi-small-27">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="fysioterapi-td-28">335 kr.</td></tr><tr><td data-rediger="fysioterapi-td-29">Konsultation, 45 min</td><td data-rediger="fysioterapi-td-30">500 kr.</td></tr><tr><td><span data-rediger="fysioterapi-span-31">Studerende, 30 min</span><small data-rediger="fysioterapi-small-32">Husk at sige, at du studerer</small></td><td data-rediger="fysioterapi-td-33">300 kr.</td></tr></table></div><p class="note" style="margin-top:10px">Se <a href="../#priser">alle mine priser</a>. Tjek gerne, om din sundhedsforsikring dækker.</p></section>
-        <section><h2 data-rediger="fysioterapi-h2-34">Spørgsmål og svar</h2><div><details><summary data-rediger="fysioterapi-summary-35">Skal jeg have en henvisning?</summary><p data-rediger="fysioterapi-p-36">Nej. Du kan booke direkte hos mig.</p></details><details><summary data-rediger="fysioterapi-summary-37">Hvad skal jeg tage med?</summary><p data-rediger="fysioterapi-p-38">Et lagen eller håndklæde til briksen og evt. et tæppe. Tag tøj på, du kan bevæge dig i.</p></details><details><summary data-rediger="fysioterapi-summary-39">Afregner du med min forsikring?</summary><p data-rediger="fysioterapi-p-40">Ja, med de fleste. Nogle skal du selv afregne med bagefter.</p></details></div></section>
+        <section><h2 data-rediger="fysioterapi-h2-3">Hvad kan jeg hjælpe med?</h2><p data-rediger="fysioterapi-p-4">Jeg undersøger og behandler hele kroppen. Det kan være smerter, der er kommet pludseligt, eller noget, der har drillet i lang tid. Jeg går meget op i at være fagligt skarp, så jeg tager hele tiden nye kurser og holder mig opdateret.</p><ul class='check'><li data-rediger="fysioterapi-li-5">Ondt i ryggen eller nakken</li><li data-rediger="fysioterapi-li-6">Skulder-, hofte- og knæsmerter</li><li data-rediger="fysioterapi-li-7">Sene- og muskelskader</li><li data-rediger="fysioterapi-li-8">Problemer i bækkenet</li><li data-rediger="fysioterapi-li-9">Kæbeproblemer</li><li data-rediger="fysioterapi-li-10">Arvæv efter kejsersnit</li><li data-rediger="fysioterapi-li-11">Svimmelhed og øresten</li><li data-rediger="fysioterapi-li-12">Genoptræning</li></ul></section><section><h2 data-rediger="fysioterapi-h2-13">Sådan foregår det</h2><ol class='steps'><li><div><b data-rediger="fysioterapi-b-14">Vi snakker sammen</b>Første gang starter vi med en god snak om, hvor det gør ondt, og hvordan din hverdag ser ud. Så undersøger jeg dig grundigt.</div></li><li><div><b data-rediger="fysioterapi-b-15">Du får behandling</b>Du får behandling allerede første gang. Det kan være manuel behandling, Mulligan, shockwave, laser, cupping eller massage.</div></li><li><div><b data-rediger="fysioterapi-b-16">Øvelser</b>Du får øvelser, såfremt det er relevant for behandlingen.</div></li><li><div><b data-rediger="fysioterapi-b-17">Vi følger op</b>Jeg justerer behandlingen hen ad vejen, til du er tilbage i din hverdag.</div></li></ol></section>
+        <section><h2 data-rediger="fysioterapi-h2-18">Priser</h2><div class="ptable"><table><tr><td><span data-rediger="fysioterapi-span-19">1. konsultation, 45 min</span><small data-rediger="fysioterapi-small-20">Tilskud fra Sygeforsikring "danmark": 140 kr.</small></td><td data-rediger="fysioterapi-td-21">500 kr.</td></tr><tr><td data-rediger="fysioterapi-td-22">1. konsultation, 60 min</td><td data-rediger="fysioterapi-td-23">650 kr.</td></tr><tr><td><span data-rediger="fysioterapi-span-24">Behandling, 30 min</span><small data-rediger="fysioterapi-small-25">Tilskud fra Sygeforsikring "danmark": 90 kr.</small></td><td data-rediger="fysioterapi-td-26">335 kr.</td></tr><tr><td data-rediger="fysioterapi-td-27">Behandling, 45 min</td><td data-rediger="fysioterapi-td-28">500 kr.</td></tr><tr><td><span data-rediger="fysioterapi-span-29">Studerende, 30 min</span><small data-rediger="fysioterapi-small-30">Husk at sige, at du studerer</small></td><td data-rediger="fysioterapi-td-31">300 kr.</td></tr></table></div><p class="note" style="margin-top:10px">Se <a href="../#priser">alle mine priser</a>. Tjek gerne, om din sundhedsforsikring dækker.</p></section>
+        <section><h2 data-rediger="fysioterapi-h2-32">Spørgsmål og svar</h2><div><details><summary data-rediger="fysioterapi-summary-33">Skal jeg have en henvisning?</summary><p data-rediger="fysioterapi-p-34">Nej. Du kan booke direkte hos mig.</p></details><details><summary data-rediger="fysioterapi-summary-35">Hvad skal jeg tage med?</summary><p data-rediger="fysioterapi-p-36">Et lagen eller håndklæde til briksen og evt. et tæppe. Tag tøj på, du kan bevæge dig i.</p></details><details><summary data-rediger="fysioterapi-summary-37">Afregner du med min forsikring?</summary><p data-rediger="fysioterapi-p-38">Ja, med de fleste. Nogle skal du selv afregne med bagefter.</p></details></div></section>
       </div>
       <aside class="p-side">
         <div class="side-box">
-          <h3 data-rediger="fysioterapi-h3-41">Book tid</h3>
-          <p data-rediger="fysioterapi-p-42">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
-          <span class="big" data-rediger="fysioterapi-span-43">26 82 03 03</span>
-          <span data-rediger="fysioterapi-span-44">sarahsfys@gmail.com</span>
+          <h3 data-rediger="fysioterapi-h3-39">Book tid</h3>
+          <p data-rediger="fysioterapi-p-40">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
+          <span class="big" data-rediger="fysioterapi-span-41">26 82 03 03</span>
+          <span data-rediger="fysioterapi-span-42">sarahsfys@gmail.com</span>
           <a class="btn btn-solid" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
           <a class="btn btn-line" href="../#kontakt">Bliv ringet op</a>
         </div>
         <div class="side-box">
-          <h3 data-rediger="fysioterapi-h3-45">Behandlinger</h3>
+          <h3 data-rediger="fysioterapi-h3-43">Behandlinger</h3>
           <ul><li><a href="../fysioterapi/" aria-current="page">Fysioterapi</a></li><li><a href="../massage/">Massage og cupping</a></li><li><a href="../shockwave-og-laser/">Shockwave og laser</a></li><li><a href="../rejsningsproblemer/">Rejsningsproblemer</a></li><li><a href="../oresten-og-svimmelhed/">Svimmelhed og øresten</a></li><li><a href="../hold-og-traening/">Hold og træning</a></li><li><a href="../hjemmebehandling-og-firmaaftaler/">Hjemmebehandling og firma</a></li></ul>
         </div>
       </aside>
@@ -502,7 +503,7 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
 
   <div class="cta-band">
     <div class="wrap">
-      <div><h2 data-rediger="fysioterapi-h2-46">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="fysioterapi-p-47">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
+      <div><h2 data-rediger="fysioterapi-h2-44">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="fysioterapi-p-45">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
       <a class="btn btn-white" href="https://booking.cliniccare.dk/gmt/book_step1.aspx?SiteID=752001" target="_blank" rel="noopener">Book tid online</a>
     </div>
   </div>
