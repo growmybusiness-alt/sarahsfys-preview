@@ -419,6 +419,45 @@ footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .bk-ed{background:var(--footer);border-color:var(--footer);color:#C9D6D2;padding:26px}
 .bk-ed h3{color:#fff;font-size:21px}.bk-ed .kind,.bk-ed .tilskud{color:#9FD3C3}.bk-ed .meta{border-color:#2A3B37}.bk-ed .meta b{color:#fff}
 @media (max-width:640px){.bk-grid{grid-template-columns:1fr}}
+.bkp{padding-bottom:72px;background:var(--white)}
+.bkp-hd{background:var(--bg-soft);padding-block:40px 36px;border-bottom:1px solid var(--line)}
+.bkp section{padding-block:0}
+.bkp-top{max-width:720px}
+.crumbs-l{font-size:13.5px;color:var(--text);margin-bottom:10px}.crumbs-l a{color:var(--green);text-decoration:none}
+.bkp h1{font-size:clamp(32px,4.4vw,46px)}
+.lead-l{font-size:18px;margin-top:10px}
+.fakta{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.fakta li{font:600 14px var(--h);color:var(--ink);padding-left:22px;position:relative}
+.fakta li::before{content:"";position:absolute;left:2px;top:5px;width:11px;height:6px;border-left:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(-45deg)}
+.bk-sek{margin-top:44px}
+.bk-sek h2{font-size:clamp(21px,2.4vw,26px);margin-bottom:16px}
+.bk-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.bkc{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:0 1px 2px rgba(20,33,30,.04),0 8px 24px -16px rgba(20,33,30,.18);transition:transform .25s,box-shadow .25s}
+.bkc:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(20,33,30,.05),0 18px 36px -18px rgba(20,33,30,.28)}
+.bkc .kind{font:600 11px var(--h);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.bkc h3{font-size:20px;margin:6px 0 6px}
+.bkc>p{font-size:14.5px;line-height:1.55}
+.bkc .chip{align-self:flex-start;margin-top:10px;font:600 12.5px var(--h);color:var(--green);background:#EAF3F0;border-radius:999px;padding:4px 10px}
+.opts{margin-top:auto;padding-top:16px;display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:8px 8px 8px 14px;background:var(--bg-soft)}
+.opt-tid{font-size:14px;color:var(--text)}
+.opt-pris{font:700 16px var(--h);color:var(--ink);font-variant-numeric:tabular-nums}
+.opt-btn{font:600 14px var(--h);color:#fff;background:var(--green);border-radius:8px;padding:10px 14px;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s}
+.opt-btn:hover{background:var(--green-dark);transform:translateX(2px)}
+.opt-btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.bkc-note{font-size:13px;margin-top:10px;color:var(--text)}
+.bkc-ed{background:var(--footer);border-color:var(--footer);color:#C9D6D2}
+.bkc-ed h3{color:#fff}.bkc-ed .kind{color:#9FD3C3}.bkc-ed .chip{background:#22332F;color:#9FD3C3}
+.bkc-ed .opt{background:#1C2B27;border-color:#2A3B37}.bkc-ed .opt-tid{color:#C9D6D2}.bkc-ed .opt-pris{color:#fff}
+.bkc-ed .opt-btn{background:#fff;color:var(--green-dark)}.bkc-ed .opt-btn:hover{background:#E6F0ED}.bkc-ed .bkc-note{color:#9FB2AC}
+.trin3{list-style:none;counter-reset:t;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.trin3 li{counter-increment:t;display:flex;flex-direction:column;gap:4px;padding:18px 18px 18px 60px;position:relative;background:var(--bg-soft);border-radius:10px}
+.trin3 li::before{content:counter(t);position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font:700 14px var(--h);display:grid;place-items:center}
+.trin3 b{font:600 15.5px var(--h);color:var(--ink)}.trin3 span{font-size:14px}
+main.bkp ~ .callbar .btn-line{display:none}
+.bk-tlf{margin-top:16px;font-size:15px}.bk-tlf a{font-weight:600}
+@media (max-width:980px){.bk-row{grid-template-columns:1fr 1fr}.bk-row .bkc-ed{grid-column:1/-1}}
+@media (max-width:640px){.bk-row,.trin3{grid-template-columns:1fr}.bkp-hd{padding-block:28px 26px}.bk-sek{margin-top:34px}}
 .media{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .media a{font-weight:600}
 .p-hero .wrap > div > *{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
@@ -478,48 +517,26 @@ body{margin:0} img{max-width:100%} [hidden]{display:none!important}
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Åbn menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-<main>
-  <div class="p-hero noimg">
-    <div class="wrap">
-      <div>
-        <div class="crumbs"><a href="../">Forside</a> › Book tid</div>
-        <h1 data-rediger="book-h1-1">Book tid</h1>
-        <p class="lead" data-rediger="book-p-2">Vælg den behandling, der passer til dig, så kommer du direkte til min kalender. Der er ingen ventetid.</p>
-        <div class="cta"><a class="btn btn-white-line" href="tel:+4526820303">Ring 26 82 03 03</a></div>
-      </div>
-      
+<main class="bkp">
+  <div class="bkp-hd"><div class="wrap">
+    <div class="bkp-top">
+      <div class="crumbs-l"><a href="../">Forside</a> › Book tid</div>
+      <h1 data-rediger="book-h1-1">Book tid</h1>
+      <p class="lead-l" data-rediger="book-p-2">Vælg den behandling, du skal have, så kommer du direkte til min kalender.</p>
+      <ul class="fakta"><li data-rediger="book-li-3">Ingen ventetid</li><li data-rediger="book-li-4">Tilskud fra Sygeforsikring "danmark"</li><li data-rediger="book-li-5">Afbud senest 48 timer før</li></ul>
     </div>
-  </div>
-
-  <div class="wrap" style="padding-block:72px">
-    <div class="p-body">
-      <div class="p-main">
-        <section><h2 data-rediger="book-h2-3">Rejsningsproblemer</h2><article class='bk bk-ed'><span class='kind' data-rediger="book-span-4">Diskret · Første gang</span><h3 data-rediger="book-h3-5">1. konsultation, rejsningsproblemer</h3><p class='meta'><span data-rediger="book-span-6">60 min</span><b data-rediger="book-b-7">950 kr.</b></p><p class='tilskud' data-rediger="book-p-8">Tilskud 140 kr.</p><p data-rediger="book-p-9">Vi starter med en god snak for at finde ud af, om behandlingen er relevant for netop dig. Er du i tvivl, så skriv eller ring først.</p><a class='btn btn-white' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752007&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article></section><section><h2 data-rediger="book-h2-10">Fysioterapi, massage og andre behandlinger</h2><div class='bk-grid'><article class='bk'><span class='kind' data-rediger="book-span-11">Ny hos mig</span><h3 data-rediger="book-h3-12">1. konsultation</h3><p class='meta'><span data-rediger="book-span-13">45 min</span><b data-rediger="book-b-14">500 kr.</b></p><p class=tilskud data-rediger="book-p-15">Tilskud 140 kr.</p><p data-rediger="book-p-16">Første gang, hvis du har ét problem, du gerne vil have hjælp til.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752001&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-17">Ny hos mig</span><h3 data-rediger="book-h3-18">1. konsultation</h3><p class='meta'><span data-rediger="book-span-19">60 min</span><b data-rediger="book-b-20">650 kr.</b></p><p class=tilskud data-rediger="book-p-21">Tilskud 140 kr.</p><p data-rediger="book-p-22">Første gang, hvis du døjer med flere ting. Kan ikke bookes med sundhedsforsikring.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752023&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-23">Har været hos mig før</span><h3 data-rediger="book-h3-24">Behandling</h3><p class='meta'><span data-rediger="book-span-25">30 min</span><b data-rediger="book-b-26">335 kr.</b></p><p class=tilskud data-rediger="book-p-27">Tilskud 90 kr.</p><p data-rediger="book-p-28">Til dig, der allerede er i gang med et forløb.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752002&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-29">Sundhedsforsikring</span><h3 data-rediger="book-h3-30">Behandling med forsikring</h3><p class='meta'><span data-rediger="book-span-31">30 min</span><b data-rediger="book-b-32">Via din forsikring</b></p><p data-rediger="book-p-33">Fx Pension Danmark eller Nordic Netcare. Husk betalingsgarantien fra dit forsikringsselskab.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752015&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-34">Massage</span><h3 data-rediger="book-h3-35">Fysio-massage</h3><p class='meta'><span data-rediger="book-span-36">30 min</span><b data-rediger="book-b-37">365 kr.</b></p><p class=tilskud data-rediger="book-p-38">Tilskud 90 kr.</p><p data-rediger="book-p-39">Massage af ét område, fx nakke og skuldre.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752004&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-40">Massage</span><h3 data-rediger="book-h3-41">Fysio-massage</h3><p class='meta'><span data-rediger="book-span-42">60 min</span><b data-rediger="book-b-43">680 kr.</b></p><p class=tilskud data-rediger="book-p-44">Tilskud 90 kr.</p><p data-rediger="book-p-45">Massage af flere områder eller hele kroppen.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752005&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article><article class='bk'><span class='kind' data-rediger="book-span-46">Kun én behandlingsform</span><h3 data-rediger="book-h3-47">Shockwave, laser eller cupping</h3><p class='meta'><span data-rediger="book-span-48">30 min</span><b data-rediger="book-b-49">Fra 310 kr.</b></p><p class=tilskud data-rediger="book-p-50">Tilskud 90 kr.</p><p data-rediger="book-p-51">Hvis du kun skal have shockwave, laser eller cupping. Skriv gerne i bookingen, hvilken det er.</p><a class='btn btn-solid' href='https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752006&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2' target='_blank' rel='noopener'>Vælg tid</a></article></div></section><section><h2 data-rediger="book-h2-52">Sådan foregår bookingen</h2><ol class='steps'><li><div><b data-rediger="book-b-53">Vælg behandling</b>Klik på "Vælg tid" ved den behandling, du skal have.</div></li><li><div><b data-rediger="book-b-54">Vælg en ledig tid</b>Du kommer til min kalender, hvor du kan se de ledige tider de næste 8 uger.</div></li><li><div><b data-rediger="book-b-55">Udfyld dine oplysninger</b>Du skal bruge CPR-nummer, mobilnummer, navn og e-mail. Du kan vælge at få en bekræftelse på sms eller e-mail.</div></li></ol><p style='margin-top:14px' data-rediger="book-p-56">Kan du ikke finde en tid, der passer, eller har du brug for en akut tid, så ring på 26 82 03 03. Afbud skal ske senest 48 timer før.</p></section>
-        
-        
-      </div>
-      <aside class="p-side">
-        <div class="side-box">
-          <h3 data-rediger="book-h3-57">Book tid</h3>
-          <p data-rediger="book-p-58">Du behøver ingen henvisning, og der er ingen ventetid. Vi finder en tid, der passer dig.</p>
-          <span class="big" data-rediger="book-span-59">26 82 03 03</span>
-          <span data-rediger="book-span-60">sarahsfys@gmail.com</span>
-          <a class="btn btn-solid" href="../book/">Book tid</a>
-          <a class="btn btn-line" href="../#kontakt">Bliv ringet op</a>
-        </div>
-        <div class="side-box">
-          <h3 data-rediger="book-h3-61">Behandlinger</h3>
-          <ul><li><a href="../fysioterapi/">Fysioterapi</a></li><li><a href="../massage/">Massage og cupping</a></li><li><a href="../shockwave-og-laser/">Shockwave og laser</a></li><li><a href="../rejsningsproblemer/">Rejsningsproblemer</a></li><li><a href="../oresten-og-svimmelhed/">Svimmelhed og øresten</a></li><li><a href="../hold-og-traening/">Hold og træning</a></li><li><a href="../hjemmebehandling-og-firmaaftaler/">Hjemmebehandling og firma</a></li></ul>
-        </div>
-      </aside>
-    </div>
-  </div>
-
-  <div class="cta-band">
-    <div class="wrap">
-      <div><h2 data-rediger="book-h2-62">Klar til at komme i gang?</h2><p style="margin-top:6px" data-rediger="book-p-63">Ring, skriv eller udfyld formularen, så finder jeg en tid til dig.</p></div>
-      <a class="btn btn-white" href="../book/">Book tid</a>
-    </div>
+  </div></div>
+  <div class="wrap">
+    <section class="bk-sek"><h2 data-rediger="book-h2-6">Første gang hos mig</h2><div class="bk-row"><article class="bkc "><span class="kind" data-rediger="book-span-7">Første gang</span><h3 data-rediger="book-h3-8">Fysioterapi</h3><p data-rediger="book-p-9">Første besøg, hvor vi snakker sammen, og jeg undersøger og behandler dig.</p><span class="chip" data-rediger="book-span-10">Tilskud 140 kr.</span><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-11">45 min</span><b class="opt-pris" data-rediger="book-b-12">500 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752001&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div><div class="opt"><span class="opt-tid" data-rediger="book-span-13">60 min</span><b class="opt-pris" data-rediger="book-b-14">650 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752023&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div><p class=bkc-note data-rediger="book-p-15">Vælg 60 min, hvis du døjer med flere ting. 60 min kan ikke bookes med sundhedsforsikring.</p></article><article class="bkc bkc-ed"><span class="kind" data-rediger="book-span-16">Første gang · diskret</span><h3 data-rediger="book-h3-17">Rejsningsproblemer</h3><p data-rediger="book-p-18">Vi starter med en god snak om, hvorvidt behandlingen er relevant for netop dig.</p><span class="chip" data-rediger="book-span-19">Tilskud 140 kr.</span><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-20">60 min</span><b class="opt-pris" data-rediger="book-b-21">950 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752007&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div><p class=bkc-note data-rediger="book-p-22">Er du i tvivl, så skriv eller ring først.</p></article><article class="bkc "><span class="kind" data-rediger="book-span-23">Sundhedsforsikring</span><h3 data-rediger="book-h3-24">Med forsikring</h3><p data-rediger="book-p-25">Fx Pension Danmark eller Nordic Netcare. Husk betalingsgarantien fra dit forsikringsselskab.</p><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-26">30 min</span><b class="opt-pris" data-rediger="book-b-27">Forsikring</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752015&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div></article></div></section>
+    <section class="bk-sek"><h2 data-rediger="book-h2-28">Har du været hos mig før, eller skal du have massage?</h2><div class="bk-row"><article class="bkc "><span class="kind" data-rediger="book-span-29">Har været her før</span><h3 data-rediger="book-h3-30">Behandling</h3><p data-rediger="book-p-31">Til dig, der allerede er i gang med et forløb hos mig.</p><span class="chip" data-rediger="book-span-32">Tilskud 90 kr.</span><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-33">30 min</span><b class="opt-pris" data-rediger="book-b-34">335 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752002&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div></article><article class="bkc "><span class="kind" data-rediger="book-span-35">Massage</span><h3 data-rediger="book-h3-36">Fysio-massage</h3><p data-rediger="book-p-37">Massage, der passer til dine spændinger og skavanker.</p><span class="chip" data-rediger="book-span-38">Tilskud 90 kr.</span><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-39">30 min</span><b class="opt-pris" data-rediger="book-b-40">365 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752004&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div><div class="opt"><span class="opt-tid" data-rediger="book-span-41">60 min</span><b class="opt-pris" data-rediger="book-b-42">680 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752005&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div></article><article class="bkc "><span class="kind" data-rediger="book-span-43">Kun én behandlingsform</span><h3 data-rediger="book-h3-44">Shockwave, laser eller cupping</h3><p data-rediger="book-p-45">Hvis du kun skal have én af dem. Skriv gerne i bookingen, hvilken det er.</p><span class="chip" data-rediger="book-span-46">Tilskud 90 kr.</span><div class="opts"><div class="opt"><span class="opt-tid" data-rediger="book-span-47">30 min</span><b class="opt-pris" data-rediger="book-b-48">Fra 310 kr.</b><a class="opt-btn" href="https://booking.cliniccare.dk/gmt/Book_step2.aspx?SiteID=752001&UID=0&AID=0&JID=752006&TID=752000001&Mode=2&db=2&JModT=752000001&JFID=2" target="_blank" rel="noopener">Vælg tid <span aria-hidden="true">→</span></a></div></div></article></div></section>
+    <section class="bk-sek bk-saadan"><h2 data-rediger="book-h2-49">Sådan foregår det</h2>
+      <ol class="trin3">
+        <li><b data-rediger="book-b-50">Vælg tid</b><span data-rediger="book-span-51">Klik på "Vælg tid" ved den behandling og varighed, du skal have.</span></li>
+        <li><b data-rediger="book-b-52">Find en ledig tid</b><span data-rediger="book-span-53">Du kommer til min kalender med ledige tider de næste 8 uger.</span></li>
+        <li><b data-rediger="book-b-54">Udfyld dine oplysninger</b><span data-rediger="book-span-55">Du skal bruge CPR-nummer, mobilnummer, navn og e-mail.</span></li>
+      </ol>
+      <p class="bk-tlf">Kan du ikke finde en tid, der passer, eller har du brug for en akut tid? Ring på <a href="tel:+4526820303">26 82 03 03</a>.</p>
+    </section>
   </div>
 </main>
 <footer class="site">
